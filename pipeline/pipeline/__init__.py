@@ -3,5 +3,8 @@
 from pathlib import Path
 
 _PARENT = Path(__file__).resolve().parents[1]
-if str(_PARENT) not in __path__:
-    __path__.append(str(_PARENT))
+_PARENT_STR = str(_PARENT)
+
+if _PARENT_STR in __path__:
+    __path__.remove(_PARENT_STR)
+__path__.insert(0, _PARENT_STR)

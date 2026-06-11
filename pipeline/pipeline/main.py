@@ -12,8 +12,10 @@ if _PARENT_STR not in sys.path:
     sys.path.insert(0, _PARENT_STR)
 
 _PACKAGE = sys.modules.get(__package__)
-if _PACKAGE is not None and hasattr(_PACKAGE, "__path__") and _PARENT_STR not in _PACKAGE.__path__:
-    _PACKAGE.__path__.append(_PARENT_STR)
+if _PACKAGE is not None and hasattr(_PACKAGE, "__path__"):
+    if _PARENT_STR in _PACKAGE.__path__:
+        _PACKAGE.__path__.remove(_PARENT_STR)
+    _PACKAGE.__path__.insert(0, _PARENT_STR)
 
 from main import cli
 

@@ -20,7 +20,7 @@ from pipeline.collectors.fdroid_collector import FDroidCollector, fdroid_apps_to
 from pipeline.exporters.json_exporter import JSONExporter
 from pipeline.metrics.aggregator import StatisticsAggregator
 from pipeline.metrics.clri_calculator import CLRICalculator
-from pipeline.metrics.pdi_calculator import PDICalculator, PDIResult
+from pipeline.metrics.pdi_calculator import PDICalculator
 from pipeline.quality.validators import DataQualityValidator
 
 logger = logging.getLogger(__name__)
@@ -167,6 +167,7 @@ def compute_metrics(ctx: click.Context, offline: bool) -> None:
 
     pdi_payload, apps_with_drift = _build_pdi_payload(analyses, metadata)
     clri_payload, clri_results = _build_clri_payload(analyses, vulnerabilities, metadata, permission_api_payload, component_api_payload)
+    vulnerabilities_payload = _build_vulnerabilities_payload(vulnerabilities)
     dashboard_payload = StatisticsAggregator().aggregate_dashboard_stats(
         apps_payload["apps"],
         analyses,
@@ -174,8 +175,8 @@ def compute_metrics(ctx: click.Context, offline: bool) -> None:
         clri_results,
         apps_with_drift_count=apps_with_drift,
     )
+    _sync_dashboard_overview_counts(dashboard_payload, apps_payload, app_versions_payload, vulnerabilities_payload)
     comparison_payload = _build_comparison_payload()
-    vulnerabilities_payload = _build_vulnerabilities_payload(vulnerabilities)
 
     payloads = {
         "apps": apps_payload,
@@ -315,34 +316,38 @@ def _build_pdi_payload(analyses: list[APKAnalysisResult], metadata: dict) -> tup
     """计算 PDI payload。"""
     calculator = PDICalculator(metadata)
     results = []
-    all_transitions: list[PDIResult] = []
+    all_pdi_values: list[float] = []
     apps_with_drift = 0
     for package_name, versions in sorted(_group_analyses(analyses).items()):
         sequence = calculator.compute_sequence(versions)
-        cumulative = round(sum(item.pdi for item in sequence), 4)
+        drift_sequence = []
+        for item in sequence:
+            components = asdict(item.components)
+            pdi = _pdi_from_components(components, calculator.weights)
+            all_pdi_values.append(pdi)
+            drift_sequence.append(
+                {
+                    "from_version": item.from_version,
+                    "to_version": item.to_version,
+                    "from_release_date": _release_date_for(item.from_version),
+                    "to_release_date": _release_date_for(item.to_version),
+                    "components": components,
+                    "pdi": pdi,
+                    "details": item.details,
+                }
+            )
+        cumulative = round(sum(item["pdi"] for item in drift_sequence), 4)
         if cumulative > 0:
             apps_with_drift += 1
-        all_transitions.extend(sequence)
         results.append(
             {
                 "app_id": package_name,
                 "app_name": APP_META.get(package_name, {}).get("name", package_name),
-                "drift_sequence": [
-                    {
-                        "from_version": item.from_version,
-                        "to_version": item.to_version,
-                        "from_release_date": _release_date_for(item.from_version),
-                        "to_release_date": _release_date_for(item.to_version),
-                        "components": asdict(item.components),
-                        "pdi": item.pdi,
-                        "details": item.details,
-                    }
-                    for item in sequence
-                ],
+                "drift_sequence": drift_sequence,
                 "cumulative_pdi": cumulative,
             }
         )
-    pdi_values = sorted(item.pdi for item in all_transitions)
+    pdi_values = sorted(all_pdi_values)
     summary = {
         "mean_pdi": round(sum(pdi_values) / len(pdi_values), 4) if pdi_values else 0.0,
         "median_pdi": pdi_values[len(pdi_values) // 2] if pdi_values else 0.0,
@@ -357,6 +362,17 @@ def _build_pdi_payload(analyses: list[APKAnalysisResult], metadata: dict) -> tup
         "summary_stats": summary,
         "results": results,
     }, apps_with_drift
+
+
+def _pdi_from_components(components: dict, weights: dict) -> float:
+    """Compute exported PDI from the same fields validated later."""
+    return round(
+        float(weights.get("alpha", 0)) * float(components.get("delta_d", 0))
+        + float(weights.get("beta", 0)) * float(components.get("delta_s", 0))
+        + float(weights.get("gamma", 0)) * float(components.get("delta_c", 0))
+        + float(weights.get("delta", 0)) * float(components.get("delta_e", 0)),
+        4,
+    )
 
 
 def _build_clri_payload(
@@ -412,6 +428,20 @@ def _build_vulnerabilities_payload(vulnerabilities: list[Vulnerability]) -> dict
             for vuln in vulnerabilities
         ],
     }
+
+
+def _sync_dashboard_overview_counts(dashboard_payload: dict, apps_payload: dict, app_versions_payload: dict, vulnerabilities_payload: dict) -> None:
+    """Keep dashboard overview counters consistent with exported payloads."""
+    overview = dashboard_payload.setdefault("overview", {})
+    vulnerabilities = vulnerabilities_payload.get("vulnerabilities", [])
+    overview.update(
+        {
+            "total_apps": len(apps_payload.get("apps", [])),
+            "total_apk_versions": len(app_versions_payload.get("versions", [])),
+            "total_cves": len(vulnerabilities),
+            "bulletin_months": len({item.get("bulletin_date", "")[:7] for item in vulnerabilities if item.get("bulletin_date")}),
+        }
+    )
 
 
 def _build_permission_api_payload() -> dict:
