@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-06-11T08:00:00+08:00",
+  "total_apps": 3,
+  "total_cves_considered": 12,
+  "app_scores": [
+    {
+      "app_id": "org.thoughtcrime.securesms",
+      "app_name": "Signal",
+      "category": "Internet",
+      "clri": 42.8,
+      "rank": 1,
+      "top_risk_permissions": [
+        { "permission": "android.permission.RECORD_AUDIO", "contribution": 12.4 },
+        { "permission": "android.permission.CAMERA", "contribution": 10.8 }
+      ],
+      "top_associated_cves": [
+        { "cve_id": "CVE-2026-0002", "rho": 0.55, "severity": "High", "component_category": "Framework", "contribution": 7.1 },
+        { "cve_id": "CVE-2026-0005", "rho": 0.42, "severity": "Critical", "component_category": "Vendor", "contribution": 6.8 }
+      ],
+      "component_breakdown": { "Framework": 14.2, "System": 8.6, "Media": 7.4, "Kernel": 5.1, "Vendor": 7.5 }
+    },
+    {
+      "app_id": "org.schabi.newpipe",
+      "app_name": "NewPipe",
+      "category": "Multimedia",
+      "clri": 29.6,
+      "rank": 2,
+      "top_risk_permissions": [
+        { "permission": "android.permission.READ_MEDIA_VIDEO", "contribution": 9.6 },
+        { "permission": "android.permission.INTERNET", "contribution": 4.2 }
+      ],
+      "top_associated_cves": [
+        { "cve_id": "CVE-2026-0001", "rho": 0.44, "severity": "Critical", "component_category": "Media", "contribution": 6.4 },
+        { "cve_id": "CVE-2026-0008", "rho": 0.36, "severity": "Low", "component_category": "Media", "contribution": 2.1 }
+      ],
+      "component_breakdown": { "Framework": 6.1, "System": 4.0, "Media": 12.0, "Kernel": 2.5, "Vendor": 5.0 }
+    },
+    {
+      "app_id": "com.termux",
+      "app_name": "Termux",
+      "category": "Development",
+      "clri": 24.4,
+      "rank": 3,
+      "top_risk_permissions": [
+        { "permission": "android.permission.READ_EXTERNAL_STORAGE", "contribution": 8.2 },
+        { "permission": "android.permission.INTERNET", "contribution": 3.4 }
+      ],
+      "top_associated_cves": [
+        { "cve_id": "CVE-2026-0009", "rho": 0.4, "severity": "Critical", "component_category": "Kernel", "contribution": 5.9 },
+        { "cve_id": "CVE-2026-0010", "rho": 0.3, "severity": "High", "component_category": "Vendor", "contribution": 3.8 }
+      ],
+      "component_breakdown": { "Framework": 4.4, "System": 4.5, "Media": 2.0, "Kernel": 7.8, "Vendor": 5.7 }
+    }
+  ],
+  "permission_vuln_edges": [
+    { "source": "android.permission.INTERNET", "target": "CVE-2026-0002", "weight": 1.2, "rho": 0.4 },
+    { "source": "android.permission.CAMERA", "target": "CVE-2026-0005", "weight": 1.68, "rho": 0.42 },
+    { "source": "android.permission.RECORD_AUDIO", "target": "CVE-2026-0001", "weight": 1.6, "rho": 0.4 },
+    { "source": "android.permission.READ_CONTACTS", "target": "CVE-2026-0006", "weight": 1.05, "rho": 0.35 },
+    { "source": "android.permission.READ_MEDIA_VIDEO", "target": "CVE-2026-0001", "weight": 1.76, "rho": 0.44 },
+    { "source": "android.permission.READ_EXTERNAL_STORAGE", "target": "CVE-2026-0009", "weight": 1.6, "rho": 0.4 },
+    { "source": "android.permission.ACCESS_FINE_LOCATION", "target": "CVE-2026-0003", "weight": 0.8, "rho": 0.4 }
+  ]
+}

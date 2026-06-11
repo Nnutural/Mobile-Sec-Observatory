@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-06-11T08:00:00+08:00",
+  "sources": ["PScout", "Axplorer", "Android Official Docs"],
+  "coverage": {
+    "33": { "total_apis": 4800, "mapped_apis": 3900 },
+    "34": { "total_apis": 5100, "mapped_apis": 4180 }
+  },
+  "mappings": {
+    "android.permission.INTERNET": {
+      "apis": ["java.net.Socket", "okhttp3.OkHttpClient", "android.net.ConnectivityManager"],
+      "api_count": 3,
+      "source": "Android Official Docs"
+    },
+    "android.permission.CAMERA": {
+      "apis": ["android.hardware.camera2.CameraManager.openCamera", "android.hardware.Camera.open"],
+      "api_count": 2,
+      "source": "Axplorer"
+    },
+    "android.permission.RECORD_AUDIO": {
+      "apis": ["android.media.AudioRecord.startRecording", "android.media.MediaRecorder.start"],
+      "api_count": 2,
+      "source": "Axplorer"
+    },
+    "android.permission.ACCESS_FINE_LOCATION": {
+      "apis": ["android.location.LocationManager.requestLocationUpdates", "com.google.android.gms.location.FusedLocationProviderClient.getLastLocation"],
+      "api_count": 2,
+      "source": "PScout"
+    }
+  }
+}

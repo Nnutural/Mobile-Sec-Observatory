@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-06-11T08:00:00+08:00",
+  "mappings": {
+    "Framework": {
+      "apis": ["android.app.Activity", "android.content.pm.PackageManager", "android.os.Binder"],
+      "typical_files": ["frameworks/base/core/java/android/app", "frameworks/base/services/core"]
+    },
+    "System": {
+      "apis": ["android.os.SystemService", "android.provider.Settings"],
+      "typical_files": ["frameworks/base/services", "packages/SystemUI"]
+    },
+    "Media": {
+      "apis": ["android.media.MediaCodec", "android.media.MediaExtractor"],
+      "typical_files": ["frameworks/av/media", "frameworks/base/media"]
+    },
+    "Kernel": {
+      "apis": ["ioctl", "binder_ioctl"],
+      "typical_files": ["kernel/drivers", "kernel/ipc"]
+    },
+    "Vendor": {
+      "apis": ["vendor.hardware.wifi", "vendor.hardware.camera"],
+      "typical_files": ["vendor/qcom", "vendor/mediatek"]
+    }
+  }
+}

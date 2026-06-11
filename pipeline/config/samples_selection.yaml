@@ -1,0 +1,26 @@
+selection_criteria:
+  total_apps: 30
+  categories:
+    - id: "Development"        # 工具类
+      count: 6
+      examples: ["NewPipe", "Termux", "Material Files"]
+    - id: "Internet"           # 通信类
+      count: 6
+      examples: ["Element", "Briar", "K-9 Mail"]
+    - id: "Multimedia"         # 媒体类
+      count: 6
+      examples: ["VLC", "AntennaPod", "Vinyl Music Player"]
+    - id: "Navigation"         # 位置类
+      count: 6
+      examples: ["OsmAnd", "Organic Maps", "AntennaPod"]
+    - id: "Reading"            # 阅读类
+      count: 6
+      examples: ["Markor", "Joplin", "FBReader"]
+
+  per_app:
+    min_versions: 3
+    version_strategy: "latest_3_consecutive"  # 取最近 3 个连续版本
+    min_target_sdk: 26
+    max_apk_size_mb: 80
+
+random_seed: 42  # 保证可复现

@@ -1,0 +1,7 @@
+# 维护日期: 2026-06-01
+# 数据来源:
+#   - AOSP: https://source.android.com/docs/security/
+#   - OpenHarmony: https://gitee.com/openharmony/security_permission
+#   - HarmonyOS: https://developer.harmonyos.com/cn/docs/
+
+dimensions: []

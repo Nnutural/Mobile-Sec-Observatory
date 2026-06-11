@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-06-11T08:00:00+08:00",
+  "weights": {
+    "alpha": 0.3,
+    "beta": 0.4,
+    "gamma": 0.2,
+    "delta": 0.1
+  },
+  "summary_stats": {
+    "mean_pdi": 0.73,
+    "median_pdi": 0.62,
+    "max_pdi": 1.26,
+    "apps_with_drift": 3,
+    "apps_with_silent_expansion": 2
+  },
+  "results": [
+    {
+      "app_id": "org.schabi.newpipe",
+      "app_name": "NewPipe",
+      "drift_sequence": [
+        {
+          "from_version": "0.26.1",
+          "to_version": "0.27.0",
+          "from_release_date": "2025-01-10",
+          "to_release_date": "2025-06-08",
+          "components": { "delta_d": 0, "delta_s": 1, "delta_c": 0, "delta_e": 1 },
+          "pdi": 0.5,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": ["SYSTEM"],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "0.27.0",
+          "to_version": "0.28.0",
+          "from_release_date": "2025-06-08",
+          "to_release_date": "2026-02-12",
+          "components": { "delta_d": 0.65, "delta_s": 1, "delta_c": 1, "delta_e": 0 },
+          "pdi": 0.795,
+          "details": {
+            "new_dangerous_permissions": ["android.permission.READ_MEDIA_VIDEO"],
+            "silent_expansion_groups": ["STORAGE"],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 1.295
+    },
+    {
+      "app_id": "org.thoughtcrime.securesms",
+      "app_name": "Signal",
+      "drift_sequence": [
+        {
+          "from_version": "6.28.0",
+          "to_version": "6.34.0",
+          "from_release_date": "2025-02-18",
+          "to_release_date": "2025-08-21",
+          "components": { "delta_d": 0.35, "delta_s": 0, "delta_c": 1, "delta_e": 0 },
+          "pdi": 0.305,
+          "details": {
+            "new_dangerous_permissions": ["android.permission.POST_NOTIFICATIONS"],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "6.34.0",
+          "to_version": "7.0.0",
+          "from_release_date": "2025-08-21",
+          "to_release_date": "2026-03-05",
+          "components": { "delta_d": 0.9, "delta_s": 0, "delta_c": 5, "delta_e": 1 },
+          "pdi": 1.37,
+          "details": {
+            "new_dangerous_permissions": ["android.permission.ACCESS_FINE_LOCATION"],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 1.675
+    },
+    {
+      "app_id": "com.termux",
+      "app_name": "Termux",
+      "drift_sequence": [
+        {
+          "from_version": "0.118.0",
+          "to_version": "0.119.0",
+          "from_release_date": "2025-03-11",
+          "to_release_date": "2025-09-09",
+          "components": { "delta_d": 0, "delta_s": 1, "delta_c": 0, "delta_e": 1 },
+          "pdi": 0.5,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": ["SYSTEM"],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "0.119.0",
+          "to_version": "0.120.0",
+          "from_release_date": "2025-09-09",
+          "to_release_date": "2026-04-15",
+          "components": { "delta_d": 0.7, "delta_s": 0, "delta_c": 1, "delta_e": 0 },
+          "pdi": 0.41,
+          "details": {
+            "new_dangerous_permissions": ["android.permission.READ_EXTERNAL_STORAGE"],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.91
+    }
+  ]
+}

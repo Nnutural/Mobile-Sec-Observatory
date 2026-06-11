@@ -1,0 +1,232 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-06-11T08:00:00+08:00",
+  "total_count": 9,
+  "versions": [
+    {
+      "app_id": "org.schabi.newpipe",
+      "version_name": "0.26.1",
+      "version_code": 992,
+      "release_date": "2025-01-10",
+      "apk_sha256": "mock-newpipe-0261",
+      "apk_size_kb": 12300,
+      "target_sdk": 34,
+      "min_sdk": 23,
+      "permissions": {
+        "all": ["android.permission.INTERNET", "android.permission.ACCESS_NETWORK_STATE", "android.permission.POST_NOTIFICATIONS"],
+        "dangerous": ["android.permission.POST_NOTIFICATIONS"],
+        "normal": ["android.permission.INTERNET", "android.permission.ACCESS_NETWORK_STATE"],
+        "signature": [],
+        "unknown": []
+      },
+      "permission_counts": { "total": 3, "dangerous": 1, "normal": 2, "signature": 0 },
+      "components": {
+        "activities": { "total": 12, "exported": 2 },
+        "services": { "total": 5, "exported": 1 },
+        "receivers": { "total": 4, "exported": 1 },
+        "providers": { "total": 1, "exported": 0 }
+      },
+      "flags": { "debuggable": false, "allow_backup": false, "cleartext_traffic": false, "has_network_security_config": true }
+    },
+    {
+      "app_id": "org.schabi.newpipe",
+      "version_name": "0.27.0",
+      "version_code": 1004,
+      "release_date": "2025-06-08",
+      "apk_sha256": "mock-newpipe-0270",
+      "apk_size_kb": 12810,
+      "target_sdk": 35,
+      "min_sdk": 23,
+      "permissions": {
+        "all": ["android.permission.INTERNET", "android.permission.ACCESS_NETWORK_STATE", "android.permission.POST_NOTIFICATIONS", "android.permission.FOREGROUND_SERVICE"],
+        "dangerous": ["android.permission.POST_NOTIFICATIONS"],
+        "normal": ["android.permission.INTERNET", "android.permission.ACCESS_NETWORK_STATE", "android.permission.FOREGROUND_SERVICE"],
+        "signature": [],
+        "unknown": []
+      },
+      "permission_counts": { "total": 4, "dangerous": 1, "normal": 3, "signature": 0 },
+      "components": {
+        "activities": { "total": 13, "exported": 2 },
+        "services": { "total": 6, "exported": 2 },
+        "receivers": { "total": 4, "exported": 1 },
+        "providers": { "total": 1, "exported": 0 }
+      },
+      "flags": { "debuggable": false, "allow_backup": false, "cleartext_traffic": false, "has_network_security_config": true }
+    },
+    {
+      "app_id": "org.schabi.newpipe",
+      "version_name": "0.28.0",
+      "version_code": 1018,
+      "release_date": "2026-02-12",
+      "apk_sha256": "mock-newpipe-0280",
+      "apk_size_kb": 13050,
+      "target_sdk": 35,
+      "min_sdk": 23,
+      "permissions": {
+        "all": ["android.permission.INTERNET", "android.permission.ACCESS_NETWORK_STATE", "android.permission.POST_NOTIFICATIONS", "android.permission.FOREGROUND_SERVICE", "android.permission.READ_MEDIA_VIDEO"],
+        "dangerous": ["android.permission.POST_NOTIFICATIONS", "android.permission.READ_MEDIA_VIDEO"],
+        "normal": ["android.permission.INTERNET", "android.permission.ACCESS_NETWORK_STATE", "android.permission.FOREGROUND_SERVICE"],
+        "signature": [],
+        "unknown": []
+      },
+      "permission_counts": { "total": 5, "dangerous": 2, "normal": 3, "signature": 0 },
+      "components": {
+        "activities": { "total": 14, "exported": 2 },
+        "services": { "total": 6, "exported": 2 },
+        "receivers": { "total": 5, "exported": 1 },
+        "providers": { "total": 1, "exported": 0 }
+      },
+      "flags": { "debuggable": false, "allow_backup": false, "cleartext_traffic": false, "has_network_security_config": true }
+    },
+    {
+      "app_id": "org.thoughtcrime.securesms",
+      "version_name": "6.28.0",
+      "version_code": 122800,
+      "release_date": "2025-02-18",
+      "apk_sha256": "mock-signal-6280",
+      "apk_size_kb": 59500,
+      "target_sdk": 34,
+      "min_sdk": 23,
+      "permissions": {
+        "all": ["android.permission.INTERNET", "android.permission.ACCESS_NETWORK_STATE", "android.permission.CAMERA", "android.permission.RECORD_AUDIO", "android.permission.READ_CONTACTS"],
+        "dangerous": ["android.permission.CAMERA", "android.permission.RECORD_AUDIO", "android.permission.READ_CONTACTS"],
+        "normal": ["android.permission.INTERNET", "android.permission.ACCESS_NETWORK_STATE"],
+        "signature": [],
+        "unknown": []
+      },
+      "permission_counts": { "total": 5, "dangerous": 3, "normal": 2, "signature": 0 },
+      "components": {
+        "activities": { "total": 24, "exported": 4 },
+        "services": { "total": 16, "exported": 3 },
+        "receivers": { "total": 9, "exported": 2 },
+        "providers": { "total": 3, "exported": 1 }
+      },
+      "flags": { "debuggable": false, "allow_backup": false, "cleartext_traffic": false, "has_network_security_config": true }
+    },
+    {
+      "app_id": "org.thoughtcrime.securesms",
+      "version_name": "6.34.0",
+      "version_code": 123400,
+      "release_date": "2025-08-21",
+      "apk_sha256": "mock-signal-6340",
+      "apk_size_kb": 62040,
+      "target_sdk": 35,
+      "min_sdk": 23,
+      "permissions": {
+        "all": ["android.permission.INTERNET", "android.permission.ACCESS_NETWORK_STATE", "android.permission.CAMERA", "android.permission.RECORD_AUDIO", "android.permission.READ_CONTACTS", "android.permission.POST_NOTIFICATIONS"],
+        "dangerous": ["android.permission.CAMERA", "android.permission.RECORD_AUDIO", "android.permission.READ_CONTACTS", "android.permission.POST_NOTIFICATIONS"],
+        "normal": ["android.permission.INTERNET", "android.permission.ACCESS_NETWORK_STATE"],
+        "signature": [],
+        "unknown": []
+      },
+      "permission_counts": { "total": 6, "dangerous": 4, "normal": 2, "signature": 0 },
+      "components": {
+        "activities": { "total": 25, "exported": 4 },
+        "services": { "total": 17, "exported": 3 },
+        "receivers": { "total": 10, "exported": 2 },
+        "providers": { "total": 3, "exported": 1 }
+      },
+      "flags": { "debuggable": false, "allow_backup": false, "cleartext_traffic": false, "has_network_security_config": true }
+    },
+    {
+      "app_id": "org.thoughtcrime.securesms",
+      "version_name": "7.0.0",
+      "version_code": 130000,
+      "release_date": "2026-03-05",
+      "apk_sha256": "mock-signal-7000",
+      "apk_size_kb": 64120,
+      "target_sdk": 35,
+      "min_sdk": 23,
+      "permissions": {
+        "all": ["android.permission.INTERNET", "android.permission.ACCESS_NETWORK_STATE", "android.permission.CAMERA", "android.permission.RECORD_AUDIO", "android.permission.READ_CONTACTS", "android.permission.POST_NOTIFICATIONS", "android.permission.ACCESS_FINE_LOCATION"],
+        "dangerous": ["android.permission.CAMERA", "android.permission.RECORD_AUDIO", "android.permission.READ_CONTACTS", "android.permission.POST_NOTIFICATIONS", "android.permission.ACCESS_FINE_LOCATION"],
+        "normal": ["android.permission.INTERNET", "android.permission.ACCESS_NETWORK_STATE"],
+        "signature": [],
+        "unknown": []
+      },
+      "permission_counts": { "total": 7, "dangerous": 5, "normal": 2, "signature": 0 },
+      "components": {
+        "activities": { "total": 26, "exported": 5 },
+        "services": { "total": 18, "exported": 3 },
+        "receivers": { "total": 10, "exported": 2 },
+        "providers": { "total": 4, "exported": 1 }
+      },
+      "flags": { "debuggable": false, "allow_backup": false, "cleartext_traffic": false, "has_network_security_config": true }
+    },
+    {
+      "app_id": "com.termux",
+      "version_name": "0.118.0",
+      "version_code": 118,
+      "release_date": "2025-03-11",
+      "apk_sha256": "mock-termux-0118",
+      "apk_size_kb": 9520,
+      "target_sdk": 28,
+      "min_sdk": 21,
+      "permissions": {
+        "all": ["android.permission.INTERNET", "android.permission.ACCESS_NETWORK_STATE", "android.permission.WAKE_LOCK"],
+        "dangerous": [],
+        "normal": ["android.permission.INTERNET", "android.permission.ACCESS_NETWORK_STATE", "android.permission.WAKE_LOCK"],
+        "signature": [],
+        "unknown": []
+      },
+      "permission_counts": { "total": 3, "dangerous": 0, "normal": 3, "signature": 0 },
+      "components": {
+        "activities": { "total": 7, "exported": 1 },
+        "services": { "total": 6, "exported": 1 },
+        "receivers": { "total": 3, "exported": 1 },
+        "providers": { "total": 1, "exported": 0 }
+      },
+      "flags": { "debuggable": false, "allow_backup": false, "cleartext_traffic": true, "has_network_security_config": false }
+    },
+    {
+      "app_id": "com.termux",
+      "version_name": "0.119.0",
+      "version_code": 119,
+      "release_date": "2025-09-09",
+      "apk_sha256": "mock-termux-0119",
+      "apk_size_kb": 9800,
+      "target_sdk": 28,
+      "min_sdk": 21,
+      "permissions": {
+        "all": ["android.permission.INTERNET", "android.permission.ACCESS_NETWORK_STATE", "android.permission.WAKE_LOCK", "android.permission.FOREGROUND_SERVICE"],
+        "dangerous": [],
+        "normal": ["android.permission.INTERNET", "android.permission.ACCESS_NETWORK_STATE", "android.permission.WAKE_LOCK", "android.permission.FOREGROUND_SERVICE"],
+        "signature": [],
+        "unknown": []
+      },
+      "permission_counts": { "total": 4, "dangerous": 0, "normal": 4, "signature": 0 },
+      "components": {
+        "activities": { "total": 8, "exported": 1 },
+        "services": { "total": 7, "exported": 2 },
+        "receivers": { "total": 3, "exported": 1 },
+        "providers": { "total": 1, "exported": 0 }
+      },
+      "flags": { "debuggable": false, "allow_backup": false, "cleartext_traffic": true, "has_network_security_config": false }
+    },
+    {
+      "app_id": "com.termux",
+      "version_name": "0.120.0",
+      "version_code": 120,
+      "release_date": "2026-04-15",
+      "apk_sha256": "mock-termux-0120",
+      "apk_size_kb": 10020,
+      "target_sdk": 28,
+      "min_sdk": 21,
+      "permissions": {
+        "all": ["android.permission.INTERNET", "android.permission.ACCESS_NETWORK_STATE", "android.permission.WAKE_LOCK", "android.permission.FOREGROUND_SERVICE", "android.permission.READ_EXTERNAL_STORAGE"],
+        "dangerous": ["android.permission.READ_EXTERNAL_STORAGE"],
+        "normal": ["android.permission.INTERNET", "android.permission.ACCESS_NETWORK_STATE", "android.permission.WAKE_LOCK", "android.permission.FOREGROUND_SERVICE"],
+        "signature": [],
+        "unknown": []
+      },
+      "permission_counts": { "total": 5, "dangerous": 1, "normal": 4, "signature": 0 },
+      "components": {
+        "activities": { "total": 8, "exported": 1 },
+        "services": { "total": 7, "exported": 2 },
+        "receivers": { "total": 4, "exported": 1 },
+        "providers": { "total": 1, "exported": 0 }
+      },
+      "flags": { "debuggable": false, "allow_backup": false, "cleartext_traffic": true, "has_network_security_config": false }
+    }
+  ]
+}
