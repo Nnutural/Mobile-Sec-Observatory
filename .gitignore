@@ -5,7 +5,7 @@ __pycache__/
 .venv/
 pipeline/raw/
 pipeline/parsed/
-pipeline/metrics/
+pipeline/metrics/output/
 .DS_Store
 .idea/
 .vscode/
