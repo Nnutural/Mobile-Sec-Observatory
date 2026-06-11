@@ -1,0 +1,16 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="io.mso.reader"
+  android:versionCode="1"
+  android:versionName="3.0.0"
+  platformBuildVersionCode="32">
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="32" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <application android:allowBackup="true" android:usesCleartextTraffic="true">
+    <activity android:name=".ReaderActivity" android:exported="true" />
+    <service android:name=".IndexService" android:exported="false" />
+    <receiver android:name=".LibraryReceiver">
+      <intent-filter><action android:name="io.mso.reader.REFRESH" /></intent-filter>
+    </receiver>
+  </application>
+</manifest>

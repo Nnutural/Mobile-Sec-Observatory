@@ -1,51 +1,63 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-11T08:00:00+08:00",
+  "generated_at": "2026-06-11T10:09:25.644546+00:00",
   "source": "F-Droid",
-  "fdroid_index_date": "2026-06-01",
+  "fdroid_index_date": "2026-06-11",
   "total_count": 3,
   "apps": [
     {
-      "id": "org.schabi.newpipe",
-      "name": "NewPipe",
-      "name_zh": "NewPipe",
+      "id": "com.mso.media",
+      "name": "MSO Media",
+      "name_zh": "MSO Media",
       "category_id": "Multimedia",
       "category_zh": "媒体",
-      "summary": "Lightweight video client for Android.",
-      "description": "Mock sample for multimedia permission analysis.",
-      "fdroid_url": "https://f-droid.org/packages/org.schabi.newpipe/",
-      "source_url": "https://github.com/TeamNewPipe/NewPipe",
-      "license": "GPL-3.0",
-      "versions": ["0.26.1", "0.27.0", "0.28.0"],
-      "latest_version": "0.28.0"
+      "summary": "Media fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/com.mso.media/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "2.0.0",
+        "2.1.0",
+        "2.2.0"
+      ],
+      "latest_version": "2.2.0"
     },
     {
-      "id": "org.thoughtcrime.securesms",
-      "name": "Signal",
-      "name_zh": "Signal",
-      "category_id": "Internet",
-      "category_zh": "通信",
-      "summary": "Private messaging application sample.",
-      "description": "Mock sample for communication app permission drift.",
-      "fdroid_url": "https://f-droid.org/packages/org.thoughtcrime.securesms/",
-      "source_url": "https://github.com/signalapp/Signal-Android",
-      "license": "GPL-3.0",
-      "versions": ["6.28.0", "6.34.0", "7.0.0"],
-      "latest_version": "7.0.0"
+      "id": "io.mso.reader",
+      "name": "MSO Reader",
+      "name_zh": "MSO Reader",
+      "category_id": "Reading",
+      "category_zh": "阅读",
+      "summary": "Reader fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/io.mso.reader/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "3.0.0",
+        "3.1.0",
+        "3.2.0"
+      ],
+      "latest_version": "3.2.0"
     },
     {
-      "id": "com.termux",
-      "name": "Termux",
-      "name_zh": "Termux",
+      "id": "org.mso.demo",
+      "name": "MSO Demo",
+      "name_zh": "MSO Demo",
       "category_id": "Development",
       "category_zh": "开发工具",
-      "summary": "Terminal emulator and Linux environment.",
-      "description": "Mock sample for development tool security posture.",
-      "fdroid_url": "https://f-droid.org/packages/com.termux/",
-      "source_url": "https://github.com/termux/termux-app",
-      "license": "GPL-3.0",
-      "versions": ["0.118.0", "0.119.0", "0.120.0"],
-      "latest_version": "0.120.0"
+      "summary": "Manifest fixture demo app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/org.mso.demo/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "1.0.0",
+        "1.1.0",
+        "1.2.0"
+      ],
+      "latest_version": "1.2.0"
     }
   ]
 }

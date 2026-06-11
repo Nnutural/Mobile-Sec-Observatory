@@ -3,155 +3,42 @@
   "generated_at": "2026-06-11T08:00:00+08:00",
   "source": "AOSP frameworks/base + manual annotation",
   "permissions": {
-    "android.permission.INTERNET": {
-      "name": "android.permission.INTERNET",
-      "level": "normal",
-      "group": "NETWORK",
-      "weight": 0.1,
-      "description": "Allows applications to open network sockets.",
-      "description_zh": "允许应用打开网络套接字。",
-      "introduced_in_api": 1
-    },
-    "android.permission.ACCESS_NETWORK_STATE": {
-      "name": "android.permission.ACCESS_NETWORK_STATE",
-      "level": "normal",
-      "group": "NETWORK",
-      "weight": 0.1,
-      "description": "Allows applications to access network state.",
-      "description_zh": "允许应用读取网络连接状态。",
-      "introduced_in_api": 1
-    },
-    "android.permission.POST_NOTIFICATIONS": {
-      "name": "android.permission.POST_NOTIFICATIONS",
-      "level": "dangerous",
-      "group": "NOTIFICATIONS",
-      "weight": 0.35,
-      "description": "Allows applications to post notifications.",
-      "description_zh": "允许应用发送通知。",
-      "introduced_in_api": 33
-    },
-    "android.permission.FOREGROUND_SERVICE": {
-      "name": "android.permission.FOREGROUND_SERVICE",
-      "level": "normal",
-      "group": "SYSTEM",
-      "weight": 0.2,
-      "description": "Allows applications to use foreground services.",
-      "description_zh": "允许应用使用前台服务。",
-      "introduced_in_api": 28
-    },
-    "android.permission.READ_MEDIA_VIDEO": {
-      "name": "android.permission.READ_MEDIA_VIDEO",
-      "level": "dangerous",
-      "group": "STORAGE",
-      "weight": 0.65,
-      "description": "Allows applications to read video files from shared storage.",
-      "description_zh": "允许应用读取共享存储中的视频文件。",
-      "introduced_in_api": 33
-    },
-    "android.permission.CAMERA": {
-      "name": "android.permission.CAMERA",
-      "level": "dangerous",
-      "group": "CAMERA",
-      "weight": 0.8,
-      "description": "Required to access the camera device.",
-      "description_zh": "访问摄像头设备所需权限。",
-      "introduced_in_api": 1
-    },
-    "android.permission.RECORD_AUDIO": {
-      "name": "android.permission.RECORD_AUDIO",
-      "level": "dangerous",
-      "group": "MICROPHONE",
-      "weight": 0.85,
-      "description": "Allows an application to record audio.",
-      "description_zh": "允许应用录制音频。",
-      "introduced_in_api": 1
-    },
-    "android.permission.READ_CONTACTS": {
-      "name": "android.permission.READ_CONTACTS",
-      "level": "dangerous",
-      "group": "CONTACTS",
-      "weight": 0.75,
-      "description": "Allows an application to read contacts.",
-      "description_zh": "允许应用读取联系人。",
-      "introduced_in_api": 1
-    },
-    "android.permission.ACCESS_FINE_LOCATION": {
-      "name": "android.permission.ACCESS_FINE_LOCATION",
-      "level": "dangerous",
-      "group": "LOCATION",
-      "weight": 0.9,
-      "description": "Allows precise location access.",
-      "description_zh": "允许应用访问精确位置。",
-      "introduced_in_api": 1
-    },
-    "android.permission.WAKE_LOCK": {
-      "name": "android.permission.WAKE_LOCK",
-      "level": "normal",
-      "group": "SYSTEM",
-      "weight": 0.15,
-      "description": "Allows applications to keep the processor from sleeping.",
-      "description_zh": "允许应用阻止处理器休眠。",
-      "introduced_in_api": 1
-    },
-    "android.permission.READ_EXTERNAL_STORAGE": {
-      "name": "android.permission.READ_EXTERNAL_STORAGE",
-      "level": "dangerous",
-      "group": "STORAGE",
-      "weight": 0.7,
-      "description": "Allows an application to read from external storage.",
-      "description_zh": "允许应用读取外部存储。",
-      "introduced_in_api": 16,
-      "deprecated_in_api": 33
-    }
+    "android.permission.INTERNET": {"name":"android.permission.INTERNET","level":"normal","group":"NETWORK","weight":0.1,"description":"Allows network sockets.","description_zh":"允许应用访问网络。","introduced_in_api":1},
+    "android.permission.ACCESS_NETWORK_STATE": {"name":"android.permission.ACCESS_NETWORK_STATE","level":"normal","group":"NETWORK","weight":0.1,"description":"Allows reading network state.","description_zh":"允许应用读取网络状态。","introduced_in_api":1},
+    "android.permission.ACCESS_WIFI_STATE": {"name":"android.permission.ACCESS_WIFI_STATE","level":"normal","group":"NETWORK","weight":0.1,"description":"Allows reading Wi-Fi state.","description_zh":"允许应用读取 Wi-Fi 状态。","introduced_in_api":1},
+    "android.permission.CHANGE_NETWORK_STATE": {"name":"android.permission.CHANGE_NETWORK_STATE","level":"normal","group":"NETWORK","weight":0.15,"description":"Allows changing network state.","description_zh":"允许应用改变网络状态。","introduced_in_api":1},
+    "android.permission.CHANGE_WIFI_STATE": {"name":"android.permission.CHANGE_WIFI_STATE","level":"normal","group":"NETWORK","weight":0.15,"description":"Allows changing Wi-Fi state.","description_zh":"允许应用改变 Wi-Fi 状态。","introduced_in_api":1},
+    "android.permission.ACCESS_FINE_LOCATION": {"name":"android.permission.ACCESS_FINE_LOCATION","level":"dangerous","group":"LOCATION","weight":0.9,"description":"Allows precise location access.","description_zh":"允许应用访问精确位置。","introduced_in_api":1},
+    "android.permission.ACCESS_COARSE_LOCATION": {"name":"android.permission.ACCESS_COARSE_LOCATION","level":"dangerous","group":"LOCATION","weight":0.65,"description":"Allows approximate location access.","description_zh":"允许应用访问粗略位置。","introduced_in_api":1},
+    "android.permission.CAMERA": {"name":"android.permission.CAMERA","level":"dangerous","group":"CAMERA","weight":0.8,"description":"Allows camera access.","description_zh":"允许应用访问相机。","introduced_in_api":1},
+    "android.permission.RECORD_AUDIO": {"name":"android.permission.RECORD_AUDIO","level":"dangerous","group":"MICROPHONE","weight":0.85,"description":"Allows recording audio.","description_zh":"允许应用录制音频。","introduced_in_api":1},
+    "android.permission.READ_CONTACTS": {"name":"android.permission.READ_CONTACTS","level":"dangerous","group":"CONTACTS","weight":0.75,"description":"Allows reading contacts.","description_zh":"允许应用读取联系人。","introduced_in_api":1},
+    "android.permission.WRITE_CONTACTS": {"name":"android.permission.WRITE_CONTACTS","level":"dangerous","group":"CONTACTS","weight":0.7,"description":"Allows writing contacts.","description_zh":"允许应用写入联系人。","introduced_in_api":1},
+    "android.permission.GET_ACCOUNTS": {"name":"android.permission.GET_ACCOUNTS","level":"dangerous","group":"CONTACTS","weight":0.55,"description":"Allows reading accounts.","description_zh":"允许应用读取账户。","introduced_in_api":5},
+    "android.permission.READ_SMS": {"name":"android.permission.READ_SMS","level":"dangerous","group":"SMS","weight":0.85,"description":"Allows reading SMS.","description_zh":"允许应用读取短信。","introduced_in_api":1},
+    "android.permission.SEND_SMS": {"name":"android.permission.SEND_SMS","level":"dangerous","group":"SMS","weight":0.8,"description":"Allows sending SMS.","description_zh":"允许应用发送短信。","introduced_in_api":1},
+    "android.permission.RECEIVE_SMS": {"name":"android.permission.RECEIVE_SMS","level":"dangerous","group":"SMS","weight":0.75,"description":"Allows receiving SMS.","description_zh":"允许应用接收短信。","introduced_in_api":1},
+    "android.permission.READ_EXTERNAL_STORAGE": {"name":"android.permission.READ_EXTERNAL_STORAGE","level":"dangerous","group":"STORAGE","weight":0.7,"description":"Allows reading external storage.","description_zh":"允许应用读取外部存储。","introduced_in_api":16,"deprecated_in_api":33},
+    "android.permission.WRITE_EXTERNAL_STORAGE": {"name":"android.permission.WRITE_EXTERNAL_STORAGE","level":"dangerous","group":"STORAGE","weight":0.65,"description":"Allows writing external storage.","description_zh":"允许应用写入外部存储。","introduced_in_api":4,"deprecated_in_api":29},
+    "android.permission.READ_MEDIA_VIDEO": {"name":"android.permission.READ_MEDIA_VIDEO","level":"dangerous","group":"STORAGE","weight":0.65,"description":"Allows reading shared video files.","description_zh":"允许应用读取共享视频文件。","introduced_in_api":33},
+    "android.permission.READ_PHONE_STATE": {"name":"android.permission.READ_PHONE_STATE","level":"dangerous","group":"PHONE","weight":0.8,"description":"Allows reading phone state.","description_zh":"允许应用读取电话状态。","introduced_in_api":1},
+    "android.permission.CALL_PHONE": {"name":"android.permission.CALL_PHONE","level":"dangerous","group":"PHONE","weight":0.75,"description":"Allows initiating phone calls.","description_zh":"允许应用拨打电话。","introduced_in_api":1},
+    "android.permission.BLUETOOTH_CONNECT": {"name":"android.permission.BLUETOOTH_CONNECT","level":"dangerous","group":"NEARBY_DEVICES","weight":0.6,"description":"Allows connecting to Bluetooth devices.","description_zh":"允许应用连接蓝牙设备。","introduced_in_api":31},
+    "android.permission.POST_NOTIFICATIONS": {"name":"android.permission.POST_NOTIFICATIONS","level":"dangerous","group":"NOTIFICATIONS","weight":0.35,"description":"Allows posting notifications.","description_zh":"允许应用发送通知。","introduced_in_api":33},
+    "android.permission.FOREGROUND_SERVICE": {"name":"android.permission.FOREGROUND_SERVICE","level":"normal","group":"SYSTEM","weight":0.2,"description":"Allows foreground services.","description_zh":"允许应用使用前台服务。","introduced_in_api":28},
+    "android.permission.WAKE_LOCK": {"name":"android.permission.WAKE_LOCK","level":"normal","group":"SYSTEM","weight":0.15,"description":"Allows wake locks.","description_zh":"允许应用持有唤醒锁。","introduced_in_api":1}
   },
   "groups": {
-    "NETWORK": {
-      "id": "NETWORK",
-      "name_zh": "网络",
-      "description_zh": "网络访问与网络状态读取。",
-      "permissions": ["android.permission.INTERNET", "android.permission.ACCESS_NETWORK_STATE"]
-    },
-    "NOTIFICATIONS": {
-      "id": "NOTIFICATIONS",
-      "name_zh": "通知",
-      "description_zh": "通知发布与提醒。",
-      "permissions": ["android.permission.POST_NOTIFICATIONS"]
-    },
-    "SYSTEM": {
-      "id": "SYSTEM",
-      "name_zh": "系统",
-      "description_zh": "前台服务、唤醒锁等系统能力。",
-      "permissions": ["android.permission.FOREGROUND_SERVICE", "android.permission.WAKE_LOCK"]
-    },
-    "STORAGE": {
-      "id": "STORAGE",
-      "name_zh": "存储",
-      "description_zh": "共享存储和媒体访问。",
-      "permissions": ["android.permission.READ_MEDIA_VIDEO", "android.permission.READ_EXTERNAL_STORAGE"]
-    },
-    "CAMERA": {
-      "id": "CAMERA",
-      "name_zh": "相机",
-      "description_zh": "摄像头访问。",
-      "permissions": ["android.permission.CAMERA"]
-    },
-    "MICROPHONE": {
-      "id": "MICROPHONE",
-      "name_zh": "麦克风",
-      "description_zh": "音频录制。",
-      "permissions": ["android.permission.RECORD_AUDIO"]
-    },
-    "CONTACTS": {
-      "id": "CONTACTS",
-      "name_zh": "联系人",
-      "description_zh": "联系人读取。",
-      "permissions": ["android.permission.READ_CONTACTS"]
-    },
-    "LOCATION": {
-      "id": "LOCATION",
-      "name_zh": "位置",
-      "description_zh": "位置访问。",
-      "permissions": ["android.permission.ACCESS_FINE_LOCATION"]
-    }
+    "NETWORK": {"id":"NETWORK","name_zh":"网络","description_zh":"网络访问与网络状态。","permissions":["android.permission.INTERNET","android.permission.ACCESS_NETWORK_STATE","android.permission.ACCESS_WIFI_STATE","android.permission.CHANGE_NETWORK_STATE","android.permission.CHANGE_WIFI_STATE"]},
+    "LOCATION": {"id":"LOCATION","name_zh":"位置","description_zh":"粗略与精确位置。","permissions":["android.permission.ACCESS_FINE_LOCATION","android.permission.ACCESS_COARSE_LOCATION"]},
+    "CAMERA": {"id":"CAMERA","name_zh":"相机","description_zh":"相机访问。","permissions":["android.permission.CAMERA"]},
+    "MICROPHONE": {"id":"MICROPHONE","name_zh":"麦克风","description_zh":"音频录制。","permissions":["android.permission.RECORD_AUDIO"]},
+    "CONTACTS": {"id":"CONTACTS","name_zh":"联系人","description_zh":"联系人和账户。","permissions":["android.permission.READ_CONTACTS","android.permission.WRITE_CONTACTS","android.permission.GET_ACCOUNTS"]},
+    "SMS": {"id":"SMS","name_zh":"短信","description_zh":"短信读取、发送与接收。","permissions":["android.permission.READ_SMS","android.permission.SEND_SMS","android.permission.RECEIVE_SMS"]},
+    "STORAGE": {"id":"STORAGE","name_zh":"存储","description_zh":"外部存储和媒体访问。","permissions":["android.permission.READ_EXTERNAL_STORAGE","android.permission.WRITE_EXTERNAL_STORAGE","android.permission.READ_MEDIA_VIDEO"]},
+    "PHONE": {"id":"PHONE","name_zh":"电话","description_zh":"电话状态与拨号。","permissions":["android.permission.READ_PHONE_STATE","android.permission.CALL_PHONE"]},
+    "NEARBY_DEVICES": {"id":"NEARBY_DEVICES","name_zh":"附近设备","description_zh":"蓝牙等附近设备连接。","permissions":["android.permission.BLUETOOTH_CONNECT"]},
+    "NOTIFICATIONS": {"id":"NOTIFICATIONS","name_zh":"通知","description_zh":"通知发布。","permissions":["android.permission.POST_NOTIFICATIONS"]},
+    "SYSTEM": {"id":"SYSTEM","name_zh":"系统","description_zh":"前台服务与唤醒锁。","permissions":["android.permission.FOREGROUND_SERVICE","android.permission.WAKE_LOCK"]}
   }
 }

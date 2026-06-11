@@ -1,0 +1,16 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="io.mso.reader"
+  android:versionCode="2"
+  android:versionName="3.1.0"
+  platformBuildVersionCode="33">
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <uses-permission android:name="android.permission.READ_CONTACTS" />
+  <application android:allowBackup="false">
+    <activity android:name=".ReaderActivity" android:exported="true" />
+    <activity android:name=".ShareActivity" android:exported="false" />
+    <service android:name=".IndexService" android:exported="false" />
+    <receiver android:name=".LibraryReceiver" android:exported="false" />
+  </application>
+</manifest>

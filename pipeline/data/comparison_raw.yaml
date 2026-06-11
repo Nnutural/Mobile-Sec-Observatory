@@ -1,7 +1,157 @@
-# 维护日期: 2026-06-01
-# 数据来源:
-#   - AOSP: https://source.android.com/docs/security/
-#   - OpenHarmony: https://gitee.com/openharmony/security_permission
-#   - HarmonyOS: https://developer.harmonyos.com/cn/docs/
-
-dimensions: []
+dimensions:
+  - id: identity
+    name_zh: 应用身份标识
+    description_zh: 应用安装后的唯一安全主体。
+    android:
+      mechanism: UID + packageName + 签名证书
+      details: Linux UID 绑定包名和签名证书，形成应用主体。
+      source_url: https://source.android.com/docs/security/app-sandbox
+    openharmony:
+      mechanism: TokenID + Bundle + APL
+      details: AccessToken 以 TokenID 连接 Bundle 和 APL。
+      source_url: https://gitee.com/openharmony/security_permission
+    advantage: neutral
+    advantage_reason: 两者都能表达唯一主体，抽象层次不同。
+  - id: isolation
+    name_zh: 隔离机制
+    description_zh: 应用与系统资源的隔离边界。
+    android:
+      mechanism: Linux UID 沙箱 + SELinux
+      details: UID 隔离结合 SELinux MAC 强化系统域边界。
+      source_url: https://source.android.com/docs/security/features/selinux
+    openharmony:
+      mechanism: AppSandbox + 访问控制
+      details: 通过应用沙箱和系统服务鉴权限制跨域访问。
+      source_url: https://gitee.com/openharmony/security_permission
+    advantage: android
+    advantage_reason: Android 机制公开资料与验证工具更成熟。
+  - id: declaration
+    name_zh: 权限声明位置
+    description_zh: 应用声明权限的配置入口。
+    android:
+      mechanism: AndroidManifest.xml
+      details: uses-permission 元素声明权限需求。
+      source_url: https://developer.android.com/guide/topics/manifest/manifest-intro
+    openharmony:
+      mechanism: module.json5
+      details: requestPermissions 字段声明应用所需权限。
+      source_url: https://developer.harmonyos.com/
+    advantage: neutral
+    advantage_reason: 两者都采用安装包内声明文件。
+  - id: level
+    name_zh: 权限分级
+    description_zh: 权限风险和授权方式的层级划分。
+    android:
+      mechanism: normal / dangerous / signature
+      details: 危险权限运行时授权，签名权限限同签应用。
+      source_url: https://developer.android.com/guide/topics/permissions/overview
+    openharmony:
+      mechanism: normal / system_basic / system_core
+      details: APL 分级限制不同系统能力开放范围。
+      source_url: https://gitee.com/openharmony/security_permission
+    advantage: openharmony
+    advantage_reason: APL 对系统能力边界表达更显式。
+  - id: runtime_request
+    name_zh: 运行时请求
+    description_zh: 用户授权交互与授权状态变更。
+    android:
+      mechanism: Runtime Permission Dialog
+      details: 应用调用系统 API 触发危险权限授权弹窗。
+      source_url: https://developer.android.com/training/permissions/requesting
+    openharmony:
+      mechanism: requestPermissionsFromUser
+      details: 应用通过权限模块向用户请求授权。
+      source_url: https://developer.harmonyos.com/
+    advantage: neutral
+    advantage_reason: 两者都支持运行时用户决策。
+  - id: ipc
+    name_zh: IPC 鉴权
+    description_zh: 跨进程调用时的身份与权限检查。
+    android:
+      mechanism: Binder UID/PID Check
+      details: 系统服务基于调用者 UID 执行权限检查。
+      source_url: https://source.android.com/docs/security
+    openharmony:
+      mechanism: IPC + AccessToken Check
+      details: IPC 服务结合 TokenID 判断访问权限。
+      source_url: https://gitee.com/openharmony/security_permission
+    advantage: neutral
+    advantage_reason: 两者都把 IPC 与权限检查耦合。
+  - id: sandbox
+    name_zh: 沙箱边界
+    description_zh: 应用数据目录和运行环境隔离。
+    android:
+      mechanism: per-app Linux user
+      details: 每个应用默认拥有独立 UID 和私有目录。
+      source_url: https://source.android.com/docs/security/app-sandbox
+    openharmony:
+      mechanism: per-bundle sandbox
+      details: Bundle 运行在独立沙箱并受权限控制。
+      source_url: https://developer.harmonyos.com/
+    advantage: android
+    advantage_reason: Android 沙箱经过更长时间的大规模检验。
+  - id: signature
+    name_zh: 签名校验
+    description_zh: 安装包完整性和开发者身份验证。
+    android:
+      mechanism: APK Signature Scheme v1-v4
+      details: 多代签名方案验证安装包完整性。
+      source_url: https://source.android.com/docs/security/features/apksigning
+    openharmony:
+      mechanism: HAP 签名
+      details: HAP 安装前执行签名和证书校验。
+      source_url: https://developer.harmonyos.com/
+    advantage: android
+    advantage_reason: Android 签名方案文档和兼容性案例更充分。
+  - id: network
+    name_zh: 网络安全配置
+    description_zh: 明文流量与证书信任配置。
+    android:
+      mechanism: Network Security Config
+      details: 可限制明文流量和自定义证书信任。
+      source_url: https://developer.android.com/privacy-and-security/security-config
+    openharmony:
+      mechanism: 网络权限 + TLS 配置
+      details: 网络访问受权限和系统网络栈配置约束。
+      source_url: https://developer.harmonyos.com/
+    advantage: android
+    advantage_reason: Android 对应用级网络策略配置更细。
+  - id: disclosure
+    name_zh: 漏洞公开披露
+    description_zh: 系统漏洞公告和补丁信息发布。
+    android:
+      mechanism: Monthly Security Bulletin
+      details: 每月公开 CVE、严重等级和补丁级别。
+      source_url: https://source.android.com/docs/security/bulletin
+    openharmony:
+      mechanism: 分散公告
+      details: 公开漏洞数据相对分散，结构化程度较低。
+      source_url: https://gitee.com/openharmony/security
+    advantage: android
+    advantage_reason: Android 月度公告更利于研究复现。
+  - id: static_tools
+    name_zh: 静态分析工具
+    description_zh: Manifest、权限和数据流分析生态。
+    android:
+      mechanism: MobSF / FlowDroid / Androguard
+      details: 工具链覆盖 APK 解析、权限和污点分析。
+      source_url: https://github.com/androguard/androguard
+    openharmony:
+      mechanism: HAP 分析工具起步
+      details: 公开工具较少，研究生态仍在形成。
+      source_url: https://gitee.com/openharmony
+    advantage: android
+    advantage_reason: Android 静态分析生态显著更成熟。
+  - id: store_review
+    name_zh: 应用商店审核
+    description_zh: 上架审核和权限治理流程。
+    android:
+      mechanism: Google Play Policy
+      details: 高风险权限需声明用途并接受审核。
+      source_url: https://support.google.com/googleplay/android-developer/
+    openharmony:
+      mechanism: AppGallery / 生态审核
+      details: 结合应用市场审核权限使用合理性。
+      source_url: https://developer.huawei.com/
+    advantage: neutral
+    advantage_reason: 审核强度取决于具体市场和地区策略。

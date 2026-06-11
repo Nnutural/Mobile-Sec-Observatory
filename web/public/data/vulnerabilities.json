@@ -1,23 +1,59 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-11T08:00:00+08:00",
+  "generated_at": "2026-06-11T10:09:25.662705+00:00",
   "time_range": {
-    "start": "2025-12",
-    "end": "2026-05"
+    "start": "2024-06",
+    "end": "2025-03"
   },
-  "total_count": 12,
+  "total_count": 3,
   "vulnerabilities": [
-    { "cve_id": "CVE-2026-0001", "bulletin_date": "2026-01-01", "patch_level": "2026-01-05", "severity": "Critical", "type": "RCE", "component": "Media Framework", "component_category": "Media", "affected_versions": ["13", "14", "15"], "vendor": "AOSP", "bulletin_url": "https://source.android.com/docs/security/bulletin/2026-01-01" },
-    { "cve_id": "CVE-2026-0002", "bulletin_date": "2026-01-01", "patch_level": "2026-01-05", "severity": "High", "type": "EoP", "component": "Framework", "component_category": "Framework", "affected_versions": ["14", "15"], "vendor": "AOSP", "bulletin_url": "https://source.android.com/docs/security/bulletin/2026-01-01" },
-    { "cve_id": "CVE-2026-0003", "bulletin_date": "2026-02-01", "patch_level": "2026-02-05", "severity": "Moderate", "type": "ID", "component": "System", "component_category": "System", "affected_versions": ["12", "13", "14"], "vendor": "AOSP", "bulletin_url": "https://source.android.com/docs/security/bulletin/2026-02-01" },
-    { "cve_id": "CVE-2026-0004", "bulletin_date": "2026-02-01", "patch_level": "2026-02-05", "severity": "Low", "type": "DoS", "component": "Kernel", "component_category": "Kernel", "affected_versions": ["13", "14"], "vendor": "Kernel", "bulletin_url": "https://source.android.com/docs/security/bulletin/2026-02-01" },
-    { "cve_id": "CVE-2026-0005", "bulletin_date": "2026-03-01", "patch_level": "2026-03-05", "severity": "Critical", "type": "RCE", "component": "Qualcomm WLAN", "component_category": "Vendor", "affected_versions": ["13", "14", "15"], "vendor": "Qualcomm", "bulletin_url": "https://source.android.com/docs/security/bulletin/2026-03-01" },
-    { "cve_id": "CVE-2026-0006", "bulletin_date": "2026-03-01", "patch_level": "2026-03-05", "severity": "High", "type": "ID", "component": "System UI", "component_category": "System", "affected_versions": ["14", "15"], "vendor": "AOSP", "bulletin_url": "https://source.android.com/docs/security/bulletin/2026-03-01" },
-    { "cve_id": "CVE-2026-0007", "bulletin_date": "2026-04-01", "patch_level": "2026-04-05", "severity": "Moderate", "type": "EoP", "component": "Framework", "component_category": "Framework", "affected_versions": ["12", "13"], "vendor": "AOSP", "bulletin_url": "https://source.android.com/docs/security/bulletin/2026-04-01" },
-    { "cve_id": "CVE-2026-0008", "bulletin_date": "2026-04-01", "patch_level": "2026-04-05", "severity": "Low", "type": "N/A", "component": "Media Codec", "component_category": "Media", "affected_versions": ["14"], "vendor": "AOSP", "bulletin_url": "https://source.android.com/docs/security/bulletin/2026-04-01" },
-    { "cve_id": "CVE-2026-0009", "bulletin_date": "2026-05-01", "patch_level": "2026-05-05", "severity": "Critical", "type": "EoP", "component": "Kernel", "component_category": "Kernel", "affected_versions": ["13", "14", "15"], "vendor": "Kernel", "bulletin_url": "https://source.android.com/docs/security/bulletin/2026-05-01" },
-    { "cve_id": "CVE-2026-0010", "bulletin_date": "2026-05-01", "patch_level": "2026-05-05", "severity": "High", "type": "DoS", "component": "Mediatek Driver", "component_category": "Vendor", "affected_versions": ["12", "13", "14"], "vendor": "MediaTek", "bulletin_url": "https://source.android.com/docs/security/bulletin/2026-05-01" },
-    { "cve_id": "CVE-2025-1201", "bulletin_date": "2025-12-01", "patch_level": "2025-12-05", "severity": "Moderate", "type": "ID", "component": "Framework", "component_category": "Framework", "affected_versions": ["12", "13", "14"], "vendor": "AOSP", "bulletin_url": "https://source.android.com/docs/security/bulletin/2025-12-01" },
-    { "cve_id": "CVE-2025-1202", "bulletin_date": "2025-12-01", "patch_level": "2025-12-05", "severity": "Low", "type": "DoS", "component": "System", "component_category": "System", "affected_versions": ["13", "14"], "vendor": "AOSP", "bulletin_url": "https://source.android.com/docs/security/bulletin/2025-12-01" }
+    {
+      "cve_id": "CVE-2024-1001",
+      "bulletin_date": "2024-06-01",
+      "patch_level": "2024-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "12",
+        "13",
+        "14"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2024-06-01"
+    },
+    {
+      "cve_id": "CVE-2024-1101",
+      "bulletin_date": "2024-11-01",
+      "patch_level": "2024-11-01",
+      "severity": "Critical",
+      "type": "RCE",
+      "component": "Media Codec",
+      "component_category": "Media",
+      "affected_versions": [
+        "13",
+        "14",
+        "15"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2024-11-01"
+    },
+    {
+      "cve_id": "CVE-2025-3001",
+      "bulletin_date": "2025-03-01",
+      "patch_level": "2025-03-01",
+      "severity": "Moderate",
+      "type": "ID",
+      "component": "Qualcomm WLAN",
+      "component_category": "Vendor",
+      "affected_versions": [
+        "12",
+        "13",
+        "14"
+      ],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2025-03-01"
+    }
   ]
 }

@@ -1,0 +1,29 @@
+{
+  "source": "Android Official Docs",
+  "mappings": {
+    "android.permission.INTERNET": ["java.net.Socket.connect@api1", "java.net.HttpURLConnection.connect@api1", "android.net.Network.openConnection@api21"],
+    "android.permission.ACCESS_NETWORK_STATE": ["android.net.ConnectivityManager.getActiveNetwork@api23", "android.net.ConnectivityManager.getNetworkCapabilities@api21"],
+    "android.permission.ACCESS_WIFI_STATE": ["android.net.wifi.WifiManager.getConnectionInfo@api1", "android.net.wifi.WifiManager.getScanResults@api1"],
+    "android.permission.CHANGE_NETWORK_STATE": ["android.net.ConnectivityManager.requestNetwork@api21"],
+    "android.permission.CHANGE_WIFI_STATE": ["android.net.wifi.WifiManager.setWifiEnabled@api1"],
+    "android.permission.CAMERA": ["android.hardware.camera2.CameraManager.openCamera@api21", "androidx.camera.core.ImageCapture.takePicture@api21"],
+    "android.permission.RECORD_AUDIO": ["android.media.AudioRecord.startRecording@api3", "android.media.MediaRecorder.start@api1"],
+    "android.permission.READ_CONTACTS": ["android.provider.ContactsContract.Contacts.query@api5", "android.provider.ContactsContract.CommonDataKinds.Email.query@api5"],
+    "android.permission.WRITE_CONTACTS": ["android.provider.ContactsContract.RawContacts.insert@api5", "android.provider.ContactsContract.RawContacts.update@api5"],
+    "android.permission.GET_ACCOUNTS": ["android.accounts.AccountManager.getAccounts@api5"],
+    "android.permission.ACCESS_FINE_LOCATION": ["android.location.LocationManager.requestLocationUpdates@api1", "android.location.LocationManager.getCurrentLocation@api30", "android.location.Geocoder.getFromLocation@api1"],
+    "android.permission.ACCESS_COARSE_LOCATION": ["android.location.LocationManager.getLastKnownLocation@api1", "android.net.wifi.WifiManager.getScanResults@api1"],
+    "android.permission.READ_SMS": ["android.provider.Telephony.Sms.query@api19", "android.provider.Telephony.Sms.Inbox.query@api19"],
+    "android.permission.SEND_SMS": ["android.telephony.SmsManager.sendTextMessage@api4", "android.telephony.SmsManager.sendMultipartTextMessage@api4"],
+    "android.permission.RECEIVE_SMS": ["android.provider.Telephony.Sms.Intents.getMessagesFromIntent@api19"],
+    "android.permission.READ_EXTERNAL_STORAGE": ["android.provider.MediaStore.Images.Media.query@api16", "android.provider.MediaStore.Video.Media.query@api16"],
+    "android.permission.WRITE_EXTERNAL_STORAGE": ["android.provider.MediaStore.Images.Media.insertImage@api3"],
+    "android.permission.READ_PHONE_STATE": ["android.telephony.TelephonyManager.getImei@api26", "android.telephony.TelephonyManager.getSubscriberId@api1"],
+    "android.permission.CALL_PHONE": ["android.content.Intent.ACTION_CALL@api1", "android.telecom.TelecomManager.placeCall@api23"],
+    "android.permission.BLUETOOTH_CONNECT": ["android.bluetooth.BluetoothAdapter.getBondedDevices@api31", "android.bluetooth.BluetoothDevice.connectGatt@api18"],
+    "android.permission.POST_NOTIFICATIONS": ["android.app.NotificationManager.notify@api1"],
+    "android.permission.READ_MEDIA_VIDEO": ["android.provider.MediaStore.Video.Media.query@api33"],
+    "android.permission.FOREGROUND_SERVICE": ["android.app.Service.startForeground@api26"],
+    "android.permission.WAKE_LOCK": ["android.os.PowerManager.WakeLock.acquire@api1"]
+  }
+}

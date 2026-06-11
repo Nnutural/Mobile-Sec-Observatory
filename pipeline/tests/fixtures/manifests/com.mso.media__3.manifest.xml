@@ -1,0 +1,19 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.mso.media"
+  android:versionCode="3"
+  android:versionName="2.2.0"
+  platformBuildVersionCode="35">
+  <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="35" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+  <uses-permission android:name="android.permission.RECORD_AUDIO" />
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+  <application android:allowBackup="false" android:usesCleartextTraffic="false">
+    <activity android:name=".PlayerActivity" android:exported="true" />
+    <activity android:name=".CaptureActivity" android:exported="true" />
+    <service android:name=".PlaybackService" android:exported="true" />
+    <service android:name=".UploadService" android:exported="false" />
+    <receiver android:name=".MediaReceiver" android:exported="true" />
+  </application>
+</manifest>

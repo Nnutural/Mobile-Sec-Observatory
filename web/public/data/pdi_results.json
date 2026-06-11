@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-11T08:00:00+08:00",
+  "generated_at": "2026-06-11T10:09:25.656708+00:00",
   "weights": {
     "alpha": 0.3,
     "beta": 0.4,
@@ -8,111 +8,166 @@
     "delta": 0.1
   },
   "summary_stats": {
-    "mean_pdi": 0.73,
-    "median_pdi": 0.62,
-    "max_pdi": 1.26,
+    "mean_pdi": 0.9567,
+    "median_pdi": 1.315,
+    "max_pdi": 1.87,
     "apps_with_drift": 3,
-    "apps_with_silent_expansion": 2
+    "apps_with_silent_expansion": 3
   },
   "results": [
     {
-      "app_id": "org.schabi.newpipe",
-      "app_name": "NewPipe",
+      "app_id": "com.mso.media",
+      "app_name": "MSO Media",
       "drift_sequence": [
         {
-          "from_version": "0.26.1",
-          "to_version": "0.27.0",
-          "from_release_date": "2025-01-10",
-          "to_release_date": "2025-06-08",
-          "components": { "delta_d": 0, "delta_s": 1, "delta_c": 0, "delta_e": 1 },
-          "pdi": 0.5,
+          "from_version": "2.0.0",
+          "to_version": "2.1.0",
+          "from_release_date": "2026-01-01",
+          "to_release_date": "2026-02-01",
+          "components": {
+            "delta_d": 1.5,
+            "delta_s": 1,
+            "delta_c": 2,
+            "delta_e": 1
+          },
+          "pdi": 1.35,
           "details": {
-            "new_dangerous_permissions": [],
-            "silent_expansion_groups": ["SYSTEM"],
+            "new_dangerous_permissions": [
+              "android.permission.READ_MEDIA_VIDEO",
+              "android.permission.RECORD_AUDIO"
+            ],
+            "silent_expansion_groups": [
+              "STORAGE"
+            ],
             "removed_permissions": []
           }
         },
         {
-          "from_version": "0.27.0",
-          "to_version": "0.28.0",
-          "from_release_date": "2025-06-08",
-          "to_release_date": "2026-02-12",
-          "components": { "delta_d": 0.65, "delta_s": 1, "delta_c": 1, "delta_e": 0 },
-          "pdi": 0.795,
+          "from_version": "2.1.0",
+          "to_version": "2.2.0",
+          "from_release_date": "2026-02-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0.8,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 2
+          },
+          "pdi": 0.44,
           "details": {
-            "new_dangerous_permissions": ["android.permission.READ_MEDIA_VIDEO"],
-            "silent_expansion_groups": ["STORAGE"],
-            "removed_permissions": []
+            "new_dangerous_permissions": [
+              "android.permission.CAMERA"
+            ],
+            "silent_expansion_groups": [],
+            "removed_permissions": [
+              "android.permission.READ_EXTERNAL_STORAGE"
+            ]
           }
         }
       ],
-      "cumulative_pdi": 1.295
+      "cumulative_pdi": 1.79
     },
     {
-      "app_id": "org.thoughtcrime.securesms",
-      "app_name": "Signal",
+      "app_id": "io.mso.reader",
+      "app_name": "MSO Reader",
       "drift_sequence": [
         {
-          "from_version": "6.28.0",
-          "to_version": "6.34.0",
-          "from_release_date": "2025-02-18",
-          "to_release_date": "2025-08-21",
-          "components": { "delta_d": 0.35, "delta_s": 0, "delta_c": 1, "delta_e": 0 },
-          "pdi": 0.305,
+          "from_version": "3.0.0",
+          "to_version": "3.1.0",
+          "from_release_date": "2026-01-01",
+          "to_release_date": "2026-02-01",
+          "components": {
+            "delta_d": 0.75,
+            "delta_s": 0,
+            "delta_c": 1,
+            "delta_e": 0
+          },
+          "pdi": 0.425,
           "details": {
-            "new_dangerous_permissions": ["android.permission.POST_NOTIFICATIONS"],
+            "new_dangerous_permissions": [
+              "android.permission.READ_CONTACTS"
+            ],
             "silent_expansion_groups": [],
             "removed_permissions": []
           }
         },
         {
-          "from_version": "6.34.0",
-          "to_version": "7.0.0",
-          "from_release_date": "2025-08-21",
-          "to_release_date": "2026-03-05",
-          "components": { "delta_d": 0.9, "delta_s": 0, "delta_c": 5, "delta_e": 1 },
-          "pdi": 1.37,
+          "from_version": "3.1.0",
+          "to_version": "3.2.0",
+          "from_release_date": "2026-02-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 1.05,
+            "delta_s": 1,
+            "delta_c": 2,
+            "delta_e": 2
+          },
+          "pdi": 1.315,
           "details": {
-            "new_dangerous_permissions": ["android.permission.ACCESS_FINE_LOCATION"],
-            "silent_expansion_groups": [],
+            "new_dangerous_permissions": [
+              "android.permission.POST_NOTIFICATIONS",
+              "android.permission.WRITE_CONTACTS"
+            ],
+            "silent_expansion_groups": [
+              "CONTACTS"
+            ],
             "removed_permissions": []
           }
         }
       ],
-      "cumulative_pdi": 1.675
+      "cumulative_pdi": 1.74
     },
     {
-      "app_id": "com.termux",
-      "app_name": "Termux",
+      "app_id": "org.mso.demo",
+      "app_name": "MSO Demo",
       "drift_sequence": [
         {
-          "from_version": "0.118.0",
-          "to_version": "0.119.0",
-          "from_release_date": "2025-03-11",
-          "to_release_date": "2025-09-09",
-          "components": { "delta_d": 0, "delta_s": 1, "delta_c": 0, "delta_e": 1 },
-          "pdi": 0.5,
+          "from_version": "1.0.0",
+          "to_version": "1.1.0",
+          "from_release_date": "2026-01-01",
+          "to_release_date": "2026-02-01",
+          "components": {
+            "delta_d": 0.9,
+            "delta_s": 2,
+            "delta_c": 3,
+            "delta_e": 2
+          },
+          "pdi": 1.87,
           "details": {
-            "new_dangerous_permissions": [],
-            "silent_expansion_groups": ["SYSTEM"],
+            "new_dangerous_permissions": [
+              "android.permission.ACCESS_FINE_LOCATION"
+            ],
+            "silent_expansion_groups": [
+              "LOCATION",
+              "NETWORK"
+            ],
             "removed_permissions": []
           }
         },
         {
-          "from_version": "0.119.0",
-          "to_version": "0.120.0",
-          "from_release_date": "2025-09-09",
-          "to_release_date": "2026-04-15",
-          "components": { "delta_d": 0.7, "delta_s": 0, "delta_c": 1, "delta_e": 0 },
-          "pdi": 0.41,
+          "from_version": "1.1.0",
+          "to_version": "1.2.0",
+          "from_release_date": "2026-02-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0.8,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 1
+          },
+          "pdi": 0.34,
           "details": {
-            "new_dangerous_permissions": ["android.permission.READ_EXTERNAL_STORAGE"],
+            "new_dangerous_permissions": [
+              "android.permission.CAMERA"
+            ],
             "silent_expansion_groups": [],
-            "removed_permissions": []
+            "removed_permissions": [
+              "android.permission.ACCESS_COARSE_LOCATION"
+            ]
           }
         }
       ],
-      "cumulative_pdi": 0.91
+      "cumulative_pdi": 2.21
     }
   ]
 }

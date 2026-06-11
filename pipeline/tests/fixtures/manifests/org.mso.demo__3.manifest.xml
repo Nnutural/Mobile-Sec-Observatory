@@ -1,0 +1,18 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="org.mso.demo"
+  android:versionCode="3"
+  android:versionName="1.2.0"
+  platformBuildVersionCode="35">
+  <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="35" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.CAMERA" />
+  <application android:debuggable="false" android:allowBackup="false" android:usesCleartextTraffic="false">
+    <activity android:name=".MainActivity" android:exported="true" />
+    <activity android:name=".CameraActivity" android:exported="true" />
+    <service android:name=".SyncService" android:exported="true" />
+    <receiver android:name=".BootReceiver" android:exported="true" />
+    <provider android:name=".DataProvider" android:exported="false" />
+  </application>
+</manifest>

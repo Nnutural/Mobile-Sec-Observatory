@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["schema_version","generated_at","sources","coverage","mappings"],"properties":{"schema_version":{"const":"1.0"},"generated_at":{"type":"string"},"sources":{"type":"array","items":{"enum":["PScout","Axplorer","Android Official Docs"]}},"coverage":{"type":"object"},"mappings":{"type":"object"}}}

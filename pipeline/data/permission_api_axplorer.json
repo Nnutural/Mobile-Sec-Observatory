@@ -1,0 +1,25 @@
+{
+  "source": "Axplorer",
+  "mappings": {
+    "android.permission.INTERNET": ["java.net.Socket.connect@api1", "okhttp3.OkHttpClient.newCall@api21"],
+    "android.permission.ACCESS_NETWORK_STATE": ["android.net.ConnectivityManager.getAllNetworks@api21"],
+    "android.permission.ACCESS_WIFI_STATE": ["android.net.wifi.WifiManager.getScanResults@api1"],
+    "android.permission.CHANGE_NETWORK_STATE": ["android.net.ConnectivityManager.requestNetwork@api21"],
+    "android.permission.CHANGE_WIFI_STATE": ["android.net.wifi.WifiManager.startScan@api1"],
+    "android.permission.CAMERA": ["android.hardware.camera2.CameraManager.openCamera@api21"],
+    "android.permission.RECORD_AUDIO": ["android.media.MediaRecorder.start@api1"],
+    "android.permission.READ_CONTACTS": ["android.provider.ContactsContract.CommonDataKinds.Phone.query@api5"],
+    "android.permission.WRITE_CONTACTS": ["android.provider.ContactsContract.RawContacts.update@api5"],
+    "android.permission.GET_ACCOUNTS": ["android.accounts.AccountManager.getAccountsByType@api5"],
+    "android.permission.ACCESS_FINE_LOCATION": ["android.location.LocationManager.requestSingleUpdate@api9"],
+    "android.permission.ACCESS_COARSE_LOCATION": ["android.net.wifi.WifiManager.getScanResults@api1"],
+    "android.permission.READ_SMS": ["android.provider.Telephony.Sms.Inbox.query@api19"],
+    "android.permission.SEND_SMS": ["android.telephony.SmsManager.sendMultipartTextMessage@api4"],
+    "android.permission.RECEIVE_SMS": ["android.content.BroadcastReceiver.onReceive@api1"],
+    "android.permission.READ_EXTERNAL_STORAGE": ["android.provider.MediaStore.Video.Media.query@api16"],
+    "android.permission.WRITE_EXTERNAL_STORAGE": ["android.provider.MediaStore.Images.Media.insertImage@api3"],
+    "android.permission.READ_PHONE_STATE": ["android.telephony.TelephonyManager.getSubscriberId@api1"],
+    "android.permission.CALL_PHONE": ["android.telecom.TelecomManager.placeCall@api23"],
+    "android.permission.BLUETOOTH_CONNECT": ["android.bluetooth.BluetoothDevice.connectGatt@api18"]
+  }
+}
