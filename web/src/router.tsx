@@ -11,6 +11,7 @@ import { Dashboard } from "@/pages/Dashboard";
 import { Drift } from "@/pages/Drift";
 import { Methodology } from "@/pages/Methodology";
 import { Permissions } from "@/pages/Permissions";
+import { Sensitivity } from "@/pages/Sensitivity";
 import { Vulnerabilities } from "@/pages/Vulnerabilities";
 
 function PageRoute({ children }: PropsWithChildren) {
@@ -31,10 +32,11 @@ function SidebarRoute({ children, items }: PropsWithChildren<{ items: { id: stri
 }
 
 const permissionSidebar = [
-  { id: "overview", label: "总览" },
+  { id: "overview", label: "概览" },
   { id: "heatmap", label: "热力图" },
   { id: "combo", label: "组合矩阵" },
-  { id: "table", label: "明细表" },
+  { id: "table", label: "明细表格" },
+  { id: "clri", label: "权限-CVE 关联" },
 ];
 
 const driftSidebar = [
@@ -63,6 +65,7 @@ export const router = createBrowserRouter([
       { path: "vulnerabilities", element: <SidebarRoute items={vulnerabilitySidebar}><Vulnerabilities /></SidebarRoute> },
       { path: "comparison", element: <PageRoute><Comparison /></PageRoute> },
       { path: "methodology", element: <PageRoute><Methodology /></PageRoute> },
+      { path: "sensitivity", element: <PageRoute><Sensitivity /></PageRoute> },
       { path: "about", element: <PageRoute><About /></PageRoute> },
     ],
   },

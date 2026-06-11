@@ -1,8 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import { ChartCard } from "@/components/charts/ChartCard";
 import { DataTable, type DataTableColumn } from "@/components/charts/DataTable";
 import { PDIDecompositionBar } from "@/components/charts/PDIDecompositionBar";
 import { RadarChart, type RadarChartDatum } from "@/components/charts/RadarChart";
+import { SankeyDrift } from "@/components/charts/SankeyDrift";
 import { VersionTimeline, type VersionTimelineItem } from "@/components/charts/VersionTimeline";
 import { WeightSlider } from "@/components/charts/WeightSlider";
 import { Button } from "@/components/ui/button";
@@ -194,51 +196,44 @@ export function Drift() {
       </Card>
 
       <section className="grid grid-cols-[0.9fr_1.4fr] gap-6">
-        <Card>
-          <CardHeader>
-            <CardTitle>版本时间轴</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <VersionTimeline
-              versions={timelineVersions}
-              selectedVersion={selectedVersion}
-              onSelect={setSelectedVersion}
-              height={390}
-            />
-          </CardContent>
-        </Card>
+        <ChartCard title="版本时间轴" exportName="drift_timeline">
+          <VersionTimeline
+            versions={timelineVersions}
+            selectedVersion={selectedVersion}
+            onSelect={setSelectedVersion}
+            height={390}
+          />
+        </ChartCard>
         <div className="space-y-4">
-          <Card>
-            <CardHeader>
-              <CardTitle>当前版本漂移雷达</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <RadarChart
-                data={radarData}
-                height={250}
-                name={currentTransition ? `${currentTransition.from_version} → ${currentTransition.to_version}` : "PDI 分量"}
-              />
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>PDI 分量堆叠柱</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <PDIDecompositionBar transition={currentTransition} weights={weights} height={190} />
-            </CardContent>
-          </Card>
+          <ChartCard
+            title="当前版本漂移雷达"
+            subtitle={currentTransition ? `${currentTransition.from_version} → ${currentTransition.to_version}` : "PDI 分量"}
+            exportName="drift_radar"
+          >
+            <RadarChart
+              data={radarData}
+              height={250}
+              name={currentTransition ? `${currentTransition.from_version} → ${currentTransition.to_version}` : "PDI 分量"}
+            />
+          </ChartCard>
+          <ChartCard title="PDI 分量堆叠柱" exportName="pdi_decomp">
+            <PDIDecompositionBar transition={currentTransition} weights={weights} height={190} />
+          </ChartCard>
         </div>
       </section>
 
-      <Card>
-        <CardContent
-          className="flex h-[260px] items-center justify-center text-center text-sm"
-          style={{ color: colors.gray[500] }}
-        >
-          权限组演化（桑基图）将在阶段 4 实现，届时直接渲染同组扩张证据
-        </CardContent>
-      </Card>
+      <ChartCard
+        title="权限组演化桑基图"
+        subtitle="赭石橙连接 = 同组扩张证据，对应 ΔS 分量"
+        exportName="sankey_drift"
+      >
+        <SankeyDrift
+          appVersions={appVersions}
+          permissionsMetadata={metadata}
+          weights={weights}
+          height={420}
+        />
+      </ChartCard>
 
       <Card>
         <CardHeader>

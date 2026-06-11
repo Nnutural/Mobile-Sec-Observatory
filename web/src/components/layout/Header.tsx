@@ -12,6 +12,7 @@ const navItems = [
   { to: "/vulnerabilities", label: "漏洞态势" },
   { to: "/comparison", label: "国产对比" },
   { to: "/methodology", label: "方法说明" },
+  { to: "/sensitivity", label: "敏感性分析" },
 ];
 
 export function Header() {

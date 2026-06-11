@@ -1,11 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
+import { ChartCard } from "@/components/charts/ChartCard";
 import { DataTable, type DataTableColumn } from "@/components/charts/DataTable";
 import { LineTrendChart, type LineTrendDatum } from "@/components/charts/LineTrendChart";
 import { PieChart, type PieChartDatum } from "@/components/charts/PieChart";
 import { StackedBarChart, type StackedBarDatum } from "@/components/charts/StackedBarChart";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Select } from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -97,11 +98,12 @@ function Heatmap({
   const max = Math.max(...counts.map((item) => item.count), 1);
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Type × Component 热力图</CardTitle>
-      </CardHeader>
-      <CardContent className="space-y-4">
+    <ChartCard
+      title="Type × Component 热力图"
+      subtitle="按漏洞类型与组件类别交叉计数"
+      exportName="vuln_type_component"
+    >
+      <div className="space-y-4">
         <div className="flex items-center gap-3 text-xs" style={{ color: colors.gray[600] }}>
           <span>色阶</span>
           <span className="flex overflow-hidden rounded border" style={{ borderColor: colors.gray[200] }}>
@@ -147,8 +149,8 @@ function Heatmap({
             </>
           ))}
         </div>
-      </CardContent>
-    </Card>
+      </div>
+    </ChartCard>
   );
 }
 
@@ -308,43 +310,28 @@ export function Vulnerabilities() {
         </CardContent>
       </Card>
 
-      <Card>
-        <CardHeader>
-          <CardTitle>月度趋势</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <LineTrendChart data={trendData} series={trendSeries} height={320} mode="line" />
-        </CardContent>
-      </Card>
+      <ChartCard title="月度趋势" subtitle="按公告月份统计 CVE 数量" exportName="vuln_trend">
+        <LineTrendChart data={trendData} series={trendSeries} height={320} mode="line" />
+      </ChartCard>
 
       <section className="grid grid-cols-2 gap-6">
-        <Card>
-          <CardHeader>
-            <CardTitle>组件类别分布</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <StackedBarChart
-              data={componentBars}
-              stacks={SEVERITY_ORDER.map((severity) => ({
-                key: severityKey[severity],
-                name: SEVERITY_LABEL[severity],
-                color: severityColor(severity),
-              }))}
-              height={300}
-              xAxisLabel="组件类别"
-              yAxisLabel="漏洞数"
-              labelFormatter={(label) => `组件类别：${label}`}
-            />
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle>严重等级占比</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <PieChart data={severityPie} height={300} />
-          </CardContent>
-        </Card>
+        <ChartCard title="组件类别分布" subtitle="按组件大类堆叠不同严重等级" exportName="vuln_component">
+          <StackedBarChart
+            data={componentBars}
+            stacks={SEVERITY_ORDER.map((severity) => ({
+              key: severityKey[severity],
+              name: SEVERITY_LABEL[severity],
+              color: severityColor(severity),
+            }))}
+            height={300}
+            xAxisLabel="组件类别"
+            yAxisLabel="漏洞数"
+            labelFormatter={(label) => `组件类别：${label}`}
+          />
+        </ChartCard>
+        <ChartCard title="严重等级占比" subtitle="筛选范围内的严重等级分布" exportName="vuln_severity_pie">
+          <PieChart data={severityPie} height={300} />
+        </ChartCard>
       </section>
 
       <Heatmap
@@ -352,22 +339,21 @@ export function Vulnerabilities() {
         onSelect={(component, type) => setFilters((current) => ({ ...current, componentCategory: component, type }))}
       />
 
-      <Card>
-        <CardHeader>
-          <CardTitle>CVE 明细表</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <DataTable
-            columns={tableColumns}
-            rows={filteredRows}
-            pageSize={10}
-            searchPlaceholder="搜索 CVE ID / 组件"
-            searchKeys={["cve_id", "component"]}
-            initialSort={{ key: "bulletin_date", direction: "desc" }}
-            caption={`当前筛选：${formatNumber(filteredRows.length)} / ${formatNumber(data.total_count)} 条`}
-          />
-        </CardContent>
-      </Card>
+      <ChartCard
+        title="CVE 明细表"
+        subtitle={`当前筛选：${formatNumber(filteredRows.length)} / ${formatNumber(data.total_count)} 条`}
+        exportName="vuln_table"
+      >
+        <DataTable
+          columns={tableColumns}
+          rows={filteredRows}
+          pageSize={10}
+          searchPlaceholder="搜索 CVE ID / 组件"
+          searchKeys={["cve_id", "component"]}
+          initialSort={{ key: "bulletin_date", direction: "desc" }}
+          caption={`当前筛选：${formatNumber(filteredRows.length)} / ${formatNumber(data.total_count)} 条`}
+        />
+      </ChartCard>
     </div>
   );
 }

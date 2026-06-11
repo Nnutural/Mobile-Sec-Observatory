@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
+import { ChartCard } from "@/components/charts/ChartCard";
 import { LineTrendChart, type LineTrendDatum } from "@/components/charts/LineTrendChart";
 import { StatCard } from "@/components/charts/StatCard";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { colors } from "@/design/colors";
 import { useCLRI, useDashboardStats } from "@/hooks/useData";
@@ -15,6 +16,7 @@ const modules = [
   { title: "漏洞态势", subtitle: "Bulletin 漏洞趋势与组件分布", to: "/vulnerabilities" },
   { title: "国产对比", subtitle: "12 维 Android × OpenHarmony 对比", to: "/comparison" },
   { title: "方法说明", subtitle: "数据来源与计算公式", to: "/methodology" },
+  { title: "敏感性分析", subtitle: "PDI 权重稳定性", to: "/sensitivity" },
 ];
 
 const severityKey = {
@@ -82,19 +84,11 @@ export function Dashboard() {
       </section>
 
       <section className="grid grid-cols-[1fr_1.1fr] gap-6">
-        <Card>
-          <CardHeader>
-            <CardTitle>漏洞月度趋势</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <LineTrendChart data={trendData} series={trendSeries} height={220} mode="area" />
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle>高 CLRI 应用 Top 5</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-3">
+        <ChartCard title="漏洞月度趋势" exportName="dashboard_trend">
+          <LineTrendChart data={trendData} series={trendSeries} height={220} mode="area" />
+        </ChartCard>
+        <ChartCard title="高 CLRI 应用 Top 5" exportName="dashboard_top_clri">
+          <div className="space-y-3">
             {topApps.map((app) => (
               <div key={app.app_id} className="grid grid-cols-[160px_1fr_64px] items-center gap-3 text-sm">
                 <span style={{ color: colors.gray[700] }}>{app.app_name}</span>
@@ -109,8 +103,8 @@ export function Dashboard() {
                 </span>
               </div>
             ))}
-          </CardContent>
-        </Card>
+          </div>
+        </ChartCard>
       </section>
 
       <section className="grid grid-cols-3 gap-4">
