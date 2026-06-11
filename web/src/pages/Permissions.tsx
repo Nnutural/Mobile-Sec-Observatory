@@ -1,96 +1,239 @@
-import { ComboMatrix } from "@/components/charts/ComboMatrix";
-import { PermissionHeatmap } from "@/components/charts/PermissionHeatmap";
-import { StackedBarChart } from "@/components/charts/StackedBarChart";
+import { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
+import { DataTable, type DataTableColumn } from "@/components/charts/DataTable";
+import { StackedBarChart, type StackedBarDatum } from "@/components/charts/StackedBarChart";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Select } from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Slider } from "@/components/ui/slider";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { colors } from "@/design/colors";
-import { useAppVersions, useApps, useCLRI, usePermissionsMetadata } from "@/hooks/useData";
+import { useAppsWithLatest } from "@/hooks/useDerivedData";
+import { useAppVersions, useApps, useCLRI } from "@/hooks/useData";
+import { formatNumber } from "@/utils/formatters";
+import { CATEGORY_ZH_FALLBACK } from "@/utils/i18n";
+
+interface PermissionRow {
+  appId: string;
+  appName: string;
+  packageName: string;
+  categoryId: string;
+  category: string;
+  total: number;
+  normal: number;
+  dangerous: number;
+  signature: number;
+  exported: number;
+  clri: number;
+}
+
+function PlaceholderCard({ title }: { title: string }) {
+  return (
+    <Card>
+      <CardContent
+        className="flex h-[420px] flex-col items-center justify-center gap-2 text-center"
+        style={{ color: colors.gray[500] }}
+      >
+        <div className="text-lg font-semibold" style={{ color: colors.gray[800] }}>
+          {title}
+        </div>
+        <div className="text-sm">该可视化将在阶段 4 实现</div>
+      </CardContent>
+    </Card>
+  );
+}
+
+function exportedComponents(row: NonNullable<ReturnType<typeof useAppsWithLatest>[number]["latestVersion"]>): number {
+  return (
+    row.components.activities.exported +
+    row.components.services.exported +
+    row.components.receivers.exported +
+    row.components.providers.exported
+  );
+}
 
 export function Permissions() {
   const { data: apps } = useApps();
   const { data: versions } = useAppVersions();
-  const { data: metadata } = usePermissionsMetadata();
   const { data: clri } = useCLRI();
+  const latestRows = useAppsWithLatest();
+  const [category, setCategory] = useState("all");
+  const [dangerousMin, setDangerousMin] = useState(0);
+  const [query, setQuery] = useState("");
 
-  if (!apps || !versions || !metadata || !clri) {
+  const rows: PermissionRow[] = useMemo(
+    () =>
+      latestRows.map(({ app, latestVersion, clri: appClri }) => ({
+        appId: app.id,
+        appName: app.name_zh ?? app.name,
+        packageName: app.id,
+        categoryId: app.category_id,
+        category: CATEGORY_ZH_FALLBACK[app.category_id] ?? app.category_zh,
+        total: latestVersion?.permission_counts.total ?? 0,
+        normal: latestVersion?.permission_counts.normal ?? 0,
+        dangerous: latestVersion?.permission_counts.dangerous ?? 0,
+        signature: latestVersion?.permission_counts.signature ?? 0,
+        exported: latestVersion ? exportedComponents(latestVersion) : 0,
+        clri: appClri,
+      })),
+    [latestRows],
+  );
+
+  const categories = useMemo(
+    () =>
+      Array.from(new Set(rows.map((row) => row.categoryId))).map((categoryId) => ({
+        id: categoryId,
+        label: CATEGORY_ZH_FALLBACK[categoryId] ?? categoryId,
+      })),
+    [rows],
+  );
+
+  const filteredRows = useMemo(() => {
+    const normalizedQuery = query.trim().toLowerCase();
+    return rows.filter((row) => {
+      const categoryMatched = category === "all" || row.categoryId === category;
+      const dangerousMatched = row.dangerous >= dangerousMin;
+      const queryMatched =
+        normalizedQuery.length === 0 ||
+        row.appName.toLowerCase().includes(normalizedQuery) ||
+        row.packageName.toLowerCase().includes(normalizedQuery);
+      return categoryMatched && dangerousMatched && queryMatched;
+    });
+  }, [category, dangerousMin, query, rows]);
+
+  const chartData: StackedBarDatum[] = filteredRows.map((row) => ({
+    label: row.appName,
+    normal: row.normal,
+    dangerous: row.dangerous,
+    signature: row.signature,
+  }));
+
+  const columns: Array<DataTableColumn<PermissionRow>> = [
+    { key: "appName", header: "应用", sortable: true },
+    { key: "packageName", header: "包名", sortable: true },
+    { key: "category", header: "类别", sortable: true },
+    { key: "total", header: "权限总数", sortable: true, align: "right", sortValue: (row) => row.total },
+    { key: "dangerous", header: "危险权限", sortable: true, align: "right", sortValue: (row) => row.dangerous },
+    { key: "exported", header: "暴露组件", sortable: true, align: "right", sortValue: (row) => row.exported },
+    {
+      key: "clri",
+      header: "CLRI",
+      sortable: true,
+      align: "right",
+      sortValue: (row) => row.clri,
+      render: (row) => formatNumber(row.clri, 2),
+    },
+    {
+      key: "action",
+      header: "操作",
+      render: (row) => (
+        <Link
+          className="rounded transition hover:opacity-80 focus-visible:outline-none focus-visible:ring-2"
+          style={{ color: colors.primary[500], "--tw-ring-color": colors.primary[500] } as React.CSSProperties}
+          to={`/drift?app=${encodeURIComponent(row.appId)}`}
+        >
+          在权限漂移页查看
+        </Link>
+      ),
+    },
+  ];
+
+  if (!apps || !versions || !clri) {
     return <Skeleton className="h-[680px] w-full" />;
   }
 
-  const latestRows = apps.apps.map((app) => {
-    const latest = versions.versions.find((version) => version.app_id === app.id && version.version_name === app.latest_version);
-    const appClri = clri.app_scores.find((item) => item.app_id === app.id);
-    return { app, latest, clri: appClri?.clri ?? 0 };
-  });
+  const resetFilters = () => {
+    setCategory("all");
+    setDangerousMin(0);
+    setQuery("");
+  };
 
   return (
     <div className="space-y-6">
       <Card>
-        <CardContent className="grid grid-cols-[180px_220px_1fr_96px] gap-4 pt-6">
-          <Select defaultValue="all">
-            <option value="all">Category</option>
-            {apps.apps.map((app) => <option key={app.category_id} value={app.category_id}>{app.category_zh}</option>)}
+        <CardContent className="grid grid-cols-[180px_240px_1fr_96px] gap-4 pt-6">
+          <Select value={category} onChange={(event) => setCategory(event.currentTarget.value)}>
+            <option value="all">全部类别</option>
+            {categories.map((item) => (
+              <option key={item.id} value={item.id}>
+                {item.label}
+              </option>
+            ))}
           </Select>
-          <div className="flex items-center gap-3">
-            <span className="text-sm" style={{ color: colors.gray[600] }}>Min Dangerous</span>
-            <Slider min={0} max={5} defaultValue={0} />
-          </div>
-          <Input placeholder="Search..." />
-          <Button variant="outline">Reset</Button>
+          <label className="flex items-center gap-3">
+            <span className="text-sm" style={{ color: colors.gray[600] }}>
+              危险权限下限
+            </span>
+            <Slider
+              min={0}
+              max={10}
+              step={1}
+              value={dangerousMin}
+              aria-label="危险权限下限"
+              onChange={(event) => setDangerousMin(Number(event.currentTarget.value))}
+            />
+            <span className="w-6 text-right text-sm" style={{ color: colors.gray[700] }}>
+              {dangerousMin}
+            </span>
+          </label>
+          <Input placeholder="搜索应用名 / 包名" value={query} onChange={(event) => setQuery(event.currentTarget.value)} />
+          <Button variant="outline" onClick={resetFilters}>
+            重置
+          </Button>
         </CardContent>
       </Card>
 
       <Tabs defaultValue="overview">
         <TabsList>
-          <TabsTrigger value="overview">Overview</TabsTrigger>
-          <TabsTrigger value="heatmap">Heatmap</TabsTrigger>
-          <TabsTrigger value="combo">Combo Matrix</TabsTrigger>
-          <TabsTrigger value="table">Detail Table</TabsTrigger>
+          <TabsTrigger value="overview">总览</TabsTrigger>
+          <TabsTrigger value="heatmap">热力图</TabsTrigger>
+          <TabsTrigger value="combo">组合矩阵</TabsTrigger>
+          <TabsTrigger value="table">明细表</TabsTrigger>
         </TabsList>
         <TabsContent value="overview">
-          <StackedBarChart data={versions.versions.map((version) => ({ app_id: version.app_id, ...version.permission_counts }))} height={480} />
+          <Card>
+            <CardHeader>
+              <CardTitle>最新版本权限分布</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <StackedBarChart
+                data={chartData}
+                stacks={[
+                  { key: "normal", name: "普通权限", color: colors.primary[300] },
+                  { key: "dangerous", name: "危险权限", color: colors.severity.high },
+                  { key: "signature", name: "签名权限", color: colors.permission.contacts },
+                ]}
+                height={480}
+                xAxisLabel="应用"
+                yAxisLabel="权限数"
+              />
+            </CardContent>
+          </Card>
         </TabsContent>
         <TabsContent value="heatmap">
-          <PermissionHeatmap data={metadata.groups} height={480} />
+          <PlaceholderCard title="权限-类别热力图（阶段 4 D3 实现）" />
         </TabsContent>
         <TabsContent value="combo">
-          <ComboMatrix data={latestRows} height={480} />
+          <PlaceholderCard title="网络-敏感权限组合矩阵（阶段 4 D3 实现）" />
         </TabsContent>
         <TabsContent value="table">
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead>App</TableHead>
-                <TableHead>Cat</TableHead>
-                <TableHead>Permissions</TableHead>
-                <TableHead>Dangerous</TableHead>
-                <TableHead>Exported</TableHead>
-                <TableHead>CLRI</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {latestRows.map(({ app, latest, clri }) => (
-                <TableRow key={app.id}>
-                  <TableCell>{app.name}</TableCell>
-                  <TableCell>{app.category_zh}</TableCell>
-                  <TableCell>{latest?.permission_counts.total ?? 0}</TableCell>
-                  <TableCell>{latest?.permission_counts.dangerous ?? 0}</TableCell>
-                  <TableCell>
-                    {(latest?.components.activities.exported ?? 0) +
-                      (latest?.components.services.exported ?? 0) +
-                      (latest?.components.receivers.exported ?? 0) +
-                      (latest?.components.providers.exported ?? 0)}
-                  </TableCell>
-                  <TableCell>{clri}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
+          <Card>
+            <CardHeader>
+              <CardTitle>权限明细表</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <DataTable
+                columns={columns}
+                rows={filteredRows}
+                pageSize={10}
+                searchPlaceholder="搜索应用名 / 包名"
+                searchKeys={["appName", "packageName"]}
+                caption={`当前显示 ${formatNumber(filteredRows.length)} 个应用`}
+              />
+            </CardContent>
+          </Card>
         </TabsContent>
       </Tabs>
     </div>

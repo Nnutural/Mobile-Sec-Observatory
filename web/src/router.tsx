@@ -31,24 +31,24 @@ function SidebarRoute({ children, items }: PropsWithChildren<{ items: { id: stri
 }
 
 const permissionSidebar = [
-  { id: "overview", label: "Overview" },
-  { id: "heatmap", label: "Heatmap" },
-  { id: "combo", label: "Combo Matrix" },
-  { id: "table", label: "Detail Table" },
+  { id: "overview", label: "总览" },
+  { id: "heatmap", label: "热力图" },
+  { id: "combo", label: "组合矩阵" },
+  { id: "table", label: "明细表" },
 ];
 
 const driftSidebar = [
-  { id: "selector", label: "App Selector" },
-  { id: "timeline", label: "Version Timeline" },
-  { id: "sankey", label: "Group Evolution" },
-  { id: "weights", label: "Weight Sensitivity" },
+  { id: "selector", label: "应用切换" },
+  { id: "timeline", label: "版本时间轴" },
+  { id: "sankey", label: "权限组演化" },
+  { id: "weights", label: "权重敏感性" },
 ];
 
 const vulnerabilitySidebar = [
-  { id: "filters", label: "Filters" },
-  { id: "trend", label: "Monthly Trend" },
-  { id: "components", label: "Components" },
-  { id: "table", label: "CVE Detail Table" },
+  { id: "filters", label: "筛选器" },
+  { id: "trend", label: "月度趋势" },
+  { id: "components", label: "组件分布" },
+  { id: "table", label: "CVE 明细表" },
 ];
 
 export const router = createBrowserRouter([
