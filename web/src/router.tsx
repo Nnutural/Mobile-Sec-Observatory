@@ -1,18 +1,31 @@
-import type { PropsWithChildren } from "react";
+import React, { Suspense, type PropsWithChildren, type ReactNode } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import { App } from "@/App";
+import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { Sidebar } from "@/components/layout/Sidebar";
+import { Skeleton } from "@/components/ui/skeleton";
 import { colors } from "@/design/colors";
-import { About } from "@/pages/About";
-import { Atlas } from "@/pages/Atlas";
-import { Comparison } from "@/pages/Comparison";
 import { Dashboard } from "@/pages/Dashboard";
-import { Drift } from "@/pages/Drift";
-import { Methodology } from "@/pages/Methodology";
-import { Permissions } from "@/pages/Permissions";
-import { Sensitivity } from "@/pages/Sensitivity";
-import { Vulnerabilities } from "@/pages/Vulnerabilities";
+
+const Atlas = React.lazy(() => import("@/pages/Atlas").then((module) => ({ default: module.Atlas })));
+const Permissions = React.lazy(() => import("@/pages/Permissions").then((module) => ({ default: module.Permissions })));
+const Drift = React.lazy(() => import("@/pages/Drift").then((module) => ({ default: module.Drift })));
+const Vulnerabilities = React.lazy(() =>
+  import("@/pages/Vulnerabilities").then((module) => ({ default: module.Vulnerabilities })),
+);
+const Comparison = React.lazy(() => import("@/pages/Comparison").then((module) => ({ default: module.Comparison })));
+const Methodology = React.lazy(() => import("@/pages/Methodology").then((module) => ({ default: module.Methodology })));
+const Sensitivity = React.lazy(() => import("@/pages/Sensitivity").then((module) => ({ default: module.Sensitivity })));
+const About = React.lazy(() => import("@/pages/About").then((module) => ({ default: module.About })));
+
+function LazyPage({ children }: { children: ReactNode }) {
+  return (
+    <ErrorBoundary>
+      <Suspense fallback={<Skeleton className="h-[600px] w-full" />}>{children}</Suspense>
+    </ErrorBoundary>
+  );
+}
 
 function PageRoute({ children }: PropsWithChildren) {
   return <PageContainer>{children}</PageContainer>;
@@ -59,14 +72,14 @@ export const router = createBrowserRouter([
     element: <App />,
     children: [
       { index: true, element: <PageRoute><Dashboard /></PageRoute> },
-      { path: "atlas", element: <PageRoute><Atlas /></PageRoute> },
-      { path: "permissions", element: <SidebarRoute items={permissionSidebar}><Permissions /></SidebarRoute> },
-      { path: "drift", element: <SidebarRoute items={driftSidebar}><Drift /></SidebarRoute> },
-      { path: "vulnerabilities", element: <SidebarRoute items={vulnerabilitySidebar}><Vulnerabilities /></SidebarRoute> },
-      { path: "comparison", element: <PageRoute><Comparison /></PageRoute> },
-      { path: "methodology", element: <PageRoute><Methodology /></PageRoute> },
-      { path: "sensitivity", element: <PageRoute><Sensitivity /></PageRoute> },
-      { path: "about", element: <PageRoute><About /></PageRoute> },
+      { path: "atlas", element: <PageRoute><LazyPage><Atlas /></LazyPage></PageRoute> },
+      { path: "permissions", element: <SidebarRoute items={permissionSidebar}><LazyPage><Permissions /></LazyPage></SidebarRoute> },
+      { path: "drift", element: <SidebarRoute items={driftSidebar}><LazyPage><Drift /></LazyPage></SidebarRoute> },
+      { path: "vulnerabilities", element: <SidebarRoute items={vulnerabilitySidebar}><LazyPage><Vulnerabilities /></LazyPage></SidebarRoute> },
+      { path: "comparison", element: <PageRoute><LazyPage><Comparison /></LazyPage></PageRoute> },
+      { path: "methodology", element: <PageRoute><LazyPage><Methodology /></LazyPage></PageRoute> },
+      { path: "sensitivity", element: <PageRoute><LazyPage><Sensitivity /></LazyPage></PageRoute> },
+      { path: "about", element: <PageRoute><LazyPage><About /></LazyPage></PageRoute> },
     ],
   },
 ]);

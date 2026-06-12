@@ -7,7 +7,9 @@ from datetime import date
 import html as html_lib
 import logging
 import re
+import sys
 import time
+from pathlib import Path
 
 try:
     from bs4 import BeautifulSoup
@@ -32,6 +34,7 @@ except ImportError:  # pragma: no cover - exercised only in minimal environments
 logger = logging.getLogger(__name__)
 
 USER_AGENT = "MobileSecObservatory/0.1 (research)"
+MIN_INTERVAL_SECONDS = 0.5
 SEVERITIES = {
     "critical": "Critical",
     "high": "High",
@@ -62,6 +65,9 @@ class BulletinScraper:
 
     BASE_URL = "https://source.android.com/docs/security/bulletin"
 
+    def __init__(self) -> None:
+        self._last_request_at = 0.0
+
     def list_bulletins_in_range(self, start: date, end: date) -> list[date]:
         """按月生成公告日期列表。"""
         if start > end:
@@ -79,7 +85,7 @@ class BulletinScraper:
 
     def scrape_month(self, bulletin_date: date) -> list[Vulnerability]:
         """抓取并解析单月公告，失败时返回空列表。"""
-        url = f"{self.BASE_URL}/{bulletin_date:%Y-%m-%d}"
+        url = self.bulletin_url(bulletin_date)
         try:
             html = self._fetch(url)
             return self._parse(html, bulletin_date)
@@ -92,6 +98,7 @@ class BulletinScraper:
         last_error: Exception | None = None
         for attempt in range(3):
             try:
+                self._rate_limit()
                 response = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=30)
                 if response.status_code == 429 or response.status_code >= 500:
                     raise RuntimeError(f"temporary HTTP {response.status_code}")
@@ -106,6 +113,18 @@ class BulletinScraper:
                 time.sleep(2**attempt)
         raise RuntimeError(f"failed to fetch bulletin: {url}") from last_error
 
+    def bulletin_url(self, bulletin_date: date) -> str:
+        """Return the canonical Android Security Bulletin URL."""
+        return f"{self.BASE_URL}/{bulletin_date:%Y}/{bulletin_date:%Y-%m-%d}"
+
+    def _rate_limit(self) -> None:
+        """Throttle online requests to avoid hammering source.android.com."""
+        elapsed = time.monotonic() - self._last_request_at
+        wait = MIN_INTERVAL_SECONDS - elapsed
+        if wait > 0:
+            time.sleep(wait)
+        self._last_request_at = time.monotonic()
+
     def _parse(self, html: str, bulletin_date: date) -> list[Vulnerability]:
         """解析 HTML 并提取 CVE 表格。"""
         if BeautifulSoup is None:
@@ -113,15 +132,15 @@ class BulletinScraper:
 
         soup = BeautifulSoup(html, "html.parser")
         vulnerabilities: list[Vulnerability] = []
-        bulletin_url = f"{self.BASE_URL}/{bulletin_date:%Y-%m-%d}"
+        bulletin_url = self.bulletin_url(bulletin_date)
 
         for table in soup.find_all("table"):
             header_row = table.find("tr")
             if header_row is None:
                 continue
-            headers = [_clean_text(cell.get_text(" ")) for cell in header_row.find_all("th")]
+            headers = [_clean_text(cell.get_text(" ")) for cell in header_row.find_all(["th", "td"])]
             columns = HeaderMatcher.identify_columns(headers)
-            if "cve" not in columns:
+            if not HeaderMatcher.is_vulnerability_table(headers, columns):
                 continue
 
             section = table.find_previous(["h2", "h3"])
@@ -159,7 +178,7 @@ class BulletinScraper:
     def _parse_without_bs4(self, html: str, bulletin_date: date) -> list[Vulnerability]:
         """在未安装 BeautifulSoup 时解析精简 HTML fixture。"""
         vulnerabilities: list[Vulnerability] = []
-        bulletin_url = f"{self.BASE_URL}/{bulletin_date:%Y-%m-%d}"
+        bulletin_url = self.bulletin_url(bulletin_date)
         table_pattern = re.compile(r"<table\b[^>]*>(.*?)</table>", flags=re.IGNORECASE | re.DOTALL)
         heading_pattern = re.compile(r"<h[23]\b[^>]*>(.*?)</h[23]>", flags=re.IGNORECASE | re.DOTALL)
         headings = [(match.start(), _strip_tags(match.group(1))) for match in heading_pattern.finditer(html)]
@@ -176,7 +195,7 @@ class BulletinScraper:
                 continue
             headers = [_strip_tags(cell) for cell in re.findall(r"<th\b[^>]*>(.*?)</th>", rows[0], flags=re.IGNORECASE | re.DOTALL)]
             columns = HeaderMatcher.identify_columns(headers)
-            if "cve" not in columns:
+            if not HeaderMatcher.is_vulnerability_table(headers, columns):
                 continue
             for row in rows[1:]:
                 cells = [
@@ -262,10 +281,18 @@ class HeaderMatcher:
                 column_map["component"] = idx
 
         for idx, header in enumerate(normalized):
-            if "affected" in header or "updated aosp versions" in header:
+            if "affected" in header or "updated aosp versions" in header or "updated google services versions" in header:
                 column_map.setdefault("affected", idx)
 
         return column_map
+
+    @staticmethod
+    def is_vulnerability_table(headers: list[str], columns: dict[str, int]) -> bool:
+        """Return true only for tables that look like vulnerability rows."""
+        normalized = [_normalize_header(header) for header in headers]
+        if "cve" not in columns:
+            return False
+        return "severity" in columns or "type" in columns or any("affected" in header for header in normalized)
 
 
 def vulnerabilities_to_dicts(vulnerabilities: list[Vulnerability]) -> list[dict]:
@@ -325,3 +352,17 @@ def _infer_vendor(section_title: str) -> str:
         if needle in text:
             return vendor
     return "AOSP"
+
+
+def progress_items(items: list[date], desc: str):
+    """Return a tqdm iterator only for interactive terminals."""
+    try:
+        from tqdm import tqdm
+    except ImportError:  # pragma: no cover
+        return items
+    return tqdm(items, desc=desc, disable=not sys.stderr.isatty())
+
+
+def cache_path(cache_dir: Path, bulletin_date: date) -> Path:
+    """Return the shared HTML cache path for a bulletin month."""
+    return cache_dir / f"{bulletin_date:%Y-%m}.html"

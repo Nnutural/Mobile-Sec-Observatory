@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { ExternalLink } from "lucide-react";
 import { ChartCard } from "@/components/charts/ChartCard";
+import { useExportMode } from "@/components/charts/ExportMode";
 import {
   ANDROID_ATLAS,
   OPENHARMONY_ATLAS,
@@ -33,6 +34,7 @@ function findFirstChild(node: AtlasNode): AtlasNode {
 
 export function Atlas() {
   const { data } = useComparison();
+  const exportMode = useExportMode();
   const [variant, setVariant] = useState<AtlasVariant>("android");
   const [selectedNode, setSelectedNode] = useState<AtlasNode>(findFirstChild(ANDROID_ATLAS));
 
@@ -48,6 +50,31 @@ export function Atlas() {
   }, [selectedNode]);
 
   if (!data) return <Skeleton className="h-[640px] w-full" />;
+
+  if (exportMode) {
+    return (
+      <div className="space-y-6">
+        {VARIANT_BUTTONS.map((button) => {
+          const selected =
+            button.id === "openharmony" ? findFirstChild(OPENHARMONY_ATLAS) : findFirstChild(ANDROID_ATLAS);
+          return (
+            <ChartCard
+              key={button.id}
+              title="安全机制图谱"
+              subtitle={SUBTITLE[button.id]}
+              exportName={`atlas_${button.id}`}
+            >
+              <InteractiveAtlas
+                variant={button.id}
+                height={560}
+                selectedId={selected.id}
+              />
+            </ChartCard>
+          );
+        })}
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-4">

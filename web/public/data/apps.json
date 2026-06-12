@@ -1,63 +1,549 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-11T16:23:37.071585+00:00",
+  "generated_at": "2026-06-12T00:28:12.181565+00:00",
   "source": "F-Droid",
   "fdroid_index_date": "2026-06-12",
-  "total_count": 3,
+  "total_count": 30,
   "apps": [
     {
-      "id": "com.mso.media",
-      "name": "MSO Media",
-      "name_zh": "MSO Media",
-      "category_id": "Multimedia",
-      "category_zh": "媒体",
-      "summary": "Media fixture app.",
-      "description": "Generated from manifest fixture analysis.",
-      "fdroid_url": "https://f-droid.org/packages/com.mso.media/",
-      "source_url": "https://example.org/mobile-sec-observatory",
-      "license": "Mock",
-      "versions": [
-        "2.0.0",
-        "2.1.0",
-        "2.2.0"
-      ],
-      "latest_version": "2.2.0"
-    },
-    {
-      "id": "io.mso.reader",
-      "name": "MSO Reader",
-      "name_zh": "MSO Reader",
-      "category_id": "Reading",
-      "category_zh": "阅读",
-      "summary": "Reader fixture app.",
-      "description": "Generated from manifest fixture analysis.",
-      "fdroid_url": "https://f-droid.org/packages/io.mso.reader/",
-      "source_url": "https://example.org/mobile-sec-observatory",
-      "license": "Mock",
-      "versions": [
-        "3.0.0",
-        "3.1.0",
-        "3.2.0"
-      ],
-      "latest_version": "3.2.0"
-    },
-    {
-      "id": "org.mso.demo",
-      "name": "MSO Demo",
-      "name_zh": "MSO Demo",
+      "id": "app.comaps.fdroid",
+      "name": "app.comaps.fdroid",
+      "name_zh": "app.comaps.fdroid",
       "category_id": "Development",
       "category_zh": "开发工具",
-      "summary": "Manifest fixture demo app.",
+      "summary": "Fixture app.",
       "description": "Generated from manifest fixture analysis.",
-      "fdroid_url": "https://f-droid.org/packages/org.mso.demo/",
+      "fdroid_url": "https://f-droid.org/packages/app.comaps.fdroid/",
       "source_url": "https://example.org/mobile-sec-observatory",
       "license": "Mock",
       "versions": [
-        "1.0.0",
-        "1.1.0",
-        "1.2.0"
+        "2026.04.23-19-FDroid",
+        "2026.05.06-11-FDroid",
+        "2026.06.05-11-FDroid"
       ],
-      "latest_version": "1.2.0"
+      "latest_version": "2026.06.05-11-FDroid"
+    },
+    {
+      "id": "com.android.geto",
+      "name": "com.android.geto",
+      "name_zh": "com.android.geto",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/com.android.geto/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "1.16.9",
+        "1.17.0",
+        "1.17.1"
+      ],
+      "latest_version": "1.17.1"
+    },
+    {
+      "id": "com.demizo.daily_you",
+      "name": "com.demizo.daily_you",
+      "name_zh": "com.demizo.daily_you",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/com.demizo.daily_you/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "2.24.1",
+        "2.24.1",
+        "2.24.1"
+      ],
+      "latest_version": "2.24.1"
+    },
+    {
+      "id": "com.google.android.stardroid",
+      "name": "com.google.android.stardroid",
+      "name_zh": "com.google.android.stardroid",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/com.google.android.stardroid/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "1.15.0:Saturn",
+        "1.15.1:Saturn",
+        "1.15.2:Saturn"
+      ],
+      "latest_version": "1.15.2:Saturn"
+    },
+    {
+      "id": "com.ivarna.mkm",
+      "name": "com.ivarna.mkm",
+      "name_zh": "com.ivarna.mkm",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/com.ivarna.mkm/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "1.2",
+        "1.4",
+        "1.5"
+      ],
+      "latest_version": "1.5"
+    },
+    {
+      "id": "com.kaizen.khushu",
+      "name": "com.kaizen.khushu",
+      "name_zh": "com.kaizen.khushu",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/com.kaizen.khushu/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "0.24.9",
+        "0.24.10",
+        "0.24.11"
+      ],
+      "latest_version": "0.24.11"
+    },
+    {
+      "id": "com.kjxbyz.picguard",
+      "name": "com.kjxbyz.picguard",
+      "name_zh": "com.kjxbyz.picguard",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/com.kjxbyz.picguard/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "5.5.2",
+        "5.5.3",
+        "5.6.0"
+      ],
+      "latest_version": "5.6.0"
+    },
+    {
+      "id": "com.kylecorry.trail_sense",
+      "name": "com.kylecorry.trail_sense",
+      "name_zh": "com.kylecorry.trail_sense",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/com.kylecorry.trail_sense/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "8.0.0",
+        "8.0.1",
+        "8.0.2"
+      ],
+      "latest_version": "8.0.2"
+    },
+    {
+      "id": "com.maxrave.simpmusic",
+      "name": "com.maxrave.simpmusic",
+      "name_zh": "com.maxrave.simpmusic",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/com.maxrave.simpmusic/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "1.2.1",
+        "1.3.0",
+        "1.4.0"
+      ],
+      "latest_version": "1.4.0"
+    },
+    {
+      "id": "com.nononsenseapps.feeder",
+      "name": "com.nononsenseapps.feeder",
+      "name_zh": "com.nononsenseapps.feeder",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/com.nononsenseapps.feeder/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "2.19.0-2",
+        "2.20.0",
+        "2.21.0"
+      ],
+      "latest_version": "2.21.0"
+    },
+    {
+      "id": "com.nononsenseapps.feeder.play",
+      "name": "com.nononsenseapps.feeder.play",
+      "name_zh": "com.nononsenseapps.feeder.play",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/com.nononsenseapps.feeder.play/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "2.19.0-2",
+        "2.20.0",
+        "2.21.0"
+      ],
+      "latest_version": "2.21.0"
+    },
+    {
+      "id": "com.schwegelbin.openbible",
+      "name": "com.schwegelbin.openbible",
+      "name_zh": "com.schwegelbin.openbible",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/com.schwegelbin.openbible/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "3.1.0",
+        "3.2.1",
+        "3.2.2"
+      ],
+      "latest_version": "3.2.2"
+    },
+    {
+      "id": "com.seafile.seadroid2",
+      "name": "com.seafile.seadroid2",
+      "name_zh": "com.seafile.seadroid2",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/com.seafile.seadroid2/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "4.0.6",
+        "4.0.7",
+        "4.0.8"
+      ],
+      "latest_version": "4.0.8"
+    },
+    {
+      "id": "com.sweak.qralarm",
+      "name": "com.sweak.qralarm",
+      "name_zh": "com.sweak.qralarm",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/com.sweak.qralarm/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "2.9.3",
+        "2.9.4",
+        "2.10.0"
+      ],
+      "latest_version": "2.10.0"
+    },
+    {
+      "id": "com.viscouspot.gitsync",
+      "name": "com.viscouspot.gitsync",
+      "name_zh": "com.viscouspot.gitsync",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/com.viscouspot.gitsync/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "1.8.60",
+        "1.8.60",
+        "1.8.60"
+      ],
+      "latest_version": "1.8.60"
+    },
+    {
+      "id": "com.vovagorodok.ble_ota_app",
+      "name": "com.vovagorodok.ble_ota_app",
+      "name_zh": "com.vovagorodok.ble_ota_app",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/com.vovagorodok.ble_ota_app/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "2.0.1",
+        "2.0.2",
+        "2.0.3"
+      ],
+      "latest_version": "2.0.3"
+    },
+    {
+      "id": "com.wqar.quran_mem_helper",
+      "name": "com.wqar.quran_mem_helper",
+      "name_zh": "com.wqar.quran_mem_helper",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/com.wqar.quran_mem_helper/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "1.8.0",
+        "1.8.1",
+        "1.8.1"
+      ],
+      "latest_version": "1.8.1"
+    },
+    {
+      "id": "de.markusfisch.android.binaryeye",
+      "name": "de.markusfisch.android.binaryeye",
+      "name_zh": "de.markusfisch.android.binaryeye",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/de.markusfisch.android.binaryeye/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "1.73.1",
+        "1.74.0",
+        "1.74.1"
+      ],
+      "latest_version": "1.74.1"
+    },
+    {
+      "id": "de.schildbach.oeffi",
+      "name": "de.schildbach.oeffi",
+      "name_zh": "de.schildbach.oeffi",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/de.schildbach.oeffi/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "14.0.3",
+        "14.0.4",
+        "14.0.5"
+      ],
+      "latest_version": "14.0.5"
+    },
+    {
+      "id": "de.tutao.tutanota",
+      "name": "de.tutao.tutanota",
+      "name_zh": "de.tutao.tutanota",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/de.tutao.tutanota/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "348.260526.0",
+        "349.260602.1",
+        "350.260608.0"
+      ],
+      "latest_version": "350.260608.0"
+    },
+    {
+      "id": "eu.faircode.email",
+      "name": "eu.faircode.email",
+      "name_zh": "eu.faircode.email",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/eu.faircode.email/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "1.2318",
+        "1.2319",
+        "1.2320"
+      ],
+      "latest_version": "1.2320"
+    },
+    {
+      "id": "fr.ralala.hexviewer",
+      "name": "fr.ralala.hexviewer",
+      "name_zh": "fr.ralala.hexviewer",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/fr.ralala.hexviewer/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "1.59.6",
+        "1.59.7",
+        "1.59.8"
+      ],
+      "latest_version": "1.59.8"
+    },
+    {
+      "id": "io.github.adithya_jayan.myrepertoirapp.fdroid",
+      "name": "io.github.adithya_jayan.myrepertoirapp.fdroid",
+      "name_zh": "io.github.adithya_jayan.myrepertoirapp.fdroid",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/io.github.adithya_jayan.myrepertoirapp.fdroid/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "5.0.1",
+        "5.0.1",
+        "5.0.1"
+      ],
+      "latest_version": "5.0.1"
+    },
+    {
+      "id": "it.niedermann.owncloud.notes",
+      "name": "it.niedermann.owncloud.notes",
+      "name_zh": "it.niedermann.owncloud.notes",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/it.niedermann.owncloud.notes/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "33.1.0 RC 1",
+        "33.1.0",
+        "34.0.0"
+      ],
+      "latest_version": "34.0.0"
+    },
+    {
+      "id": "m.co.rh.id.a_news_provider",
+      "name": "m.co.rh.id.a_news_provider",
+      "name_zh": "m.co.rh.id.a_news_provider",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/m.co.rh.id.a_news_provider/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "1.11.1",
+        "1.11.2",
+        "1.12.0"
+      ],
+      "latest_version": "1.12.0"
+    },
+    {
+      "id": "net.bible.android.activity",
+      "name": "net.bible.android.activity",
+      "name_zh": "net.bible.android.activity",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/net.bible.android.activity/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "5.0.910",
+        "5.1.1099",
+        "5.1.1100"
+      ],
+      "latest_version": "5.1.1100"
+    },
+    {
+      "id": "net.pfiers.osmfocus",
+      "name": "net.pfiers.osmfocus",
+      "name_zh": "net.pfiers.osmfocus",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/net.pfiers.osmfocus/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "1.9.0-fdroid-fdroid",
+        "1.9.12-fdroid",
+        "1.9.13-fdroid"
+      ],
+      "latest_version": "1.9.13-fdroid"
+    },
+    {
+      "id": "org.connectbot",
+      "name": "org.connectbot",
+      "name_zh": "org.connectbot",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/org.connectbot/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "1.10.7-oss",
+        "1.10.8-oss",
+        "1.10.9-oss"
+      ],
+      "latest_version": "1.10.9-oss"
+    },
+    {
+      "id": "org.grakovne.lissen",
+      "name": "org.grakovne.lissen",
+      "name_zh": "org.grakovne.lissen",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/org.grakovne.lissen/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "1.10.0-release",
+        "1.10.1-release",
+        "1.10.2-release"
+      ],
+      "latest_version": "1.10.2-release"
+    },
+    {
+      "id": "page.ooooo.geoshare",
+      "name": "page.ooooo.geoshare",
+      "name_zh": "page.ooooo.geoshare",
+      "category_id": "Development",
+      "category_zh": "开发工具",
+      "summary": "Fixture app.",
+      "description": "Generated from manifest fixture analysis.",
+      "fdroid_url": "https://f-droid.org/packages/page.ooooo.geoshare/",
+      "source_url": "https://example.org/mobile-sec-observatory",
+      "license": "Mock",
+      "versions": [
+        "6.2.2",
+        "6.3.0",
+        "6.3.1"
+      ],
+      "latest_version": "6.3.1"
     }
   ]
 }

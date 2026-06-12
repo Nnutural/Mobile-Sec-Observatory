@@ -63,7 +63,10 @@ class APKAnalyzer:
 
         apk = self._load_apk(apk_path)
         if apk is not None:
-            root = self._manifest_root_from_apk_object(apk)
+            try:
+                root = self._manifest_root_from_apk_object(apk)
+            except Exception:
+                root = parse_manifest_xml(apk_path)
             permissions = self._safe_call(apk, "get_permissions") or self._permissions_from_manifest(root)
             dangerous, normal, signature, unknown = self._categorize(list(permissions))
             components = self._extract_exported_components(apk)
@@ -134,7 +137,7 @@ class APKAnalyzer:
             ("provider", "provider"),
         ]:
             nodes = [node for node in root.iter() if _local_name(node.tag) == tag]
-            exported = [node for node in nodes if _android_attr(node, "exported") == "true"]
+            exported = [node for node in nodes if _is_exported_component(node, tag)]
             result[key] = (len(nodes), len(exported))
         return result
 
@@ -290,6 +293,23 @@ def _first_child(root: ET.Element, tag: str) -> ET.Element | None:
 def _local_name(tag: str) -> str:
     """提取 XML local-name。"""
     return tag.rsplit("}", 1)[-1]
+
+
+def _is_exported_component(node: ET.Element, tag: str) -> bool:
+    """Infer exported status for real APK manifests without broadening dataclass fields."""
+    explicit = _android_attr(node, "exported")
+    if explicit is not None:
+        return explicit.lower() == "true"
+    if tag != "activity":
+        return False
+    for child in node:
+        if _local_name(child.tag) != "intent-filter":
+            continue
+        actions = {_android_attr(grandchild, "name") for grandchild in child if _local_name(grandchild.tag) == "action"}
+        categories = {_android_attr(grandchild, "name") for grandchild in child if _local_name(grandchild.tag) == "category"}
+        if "android.intent.action.MAIN" in actions and "android.intent.category.LAUNCHER" in categories:
+            return True
+    return False
 
 
 def _to_int(value: object) -> int:

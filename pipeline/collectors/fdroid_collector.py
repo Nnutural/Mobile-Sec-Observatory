@@ -10,10 +10,12 @@ import json
 import logging
 import os
 import random
+import sys
 import time
 from typing import Optional
 
 import yaml
+from tqdm import tqdm
 
 try:
     import requests
@@ -37,6 +39,7 @@ PROJECT_ROOT = PIPELINE_ROOT.parent
 DEFAULT_CONFIG = PIPELINE_ROOT / "config" / "samples_selection.yaml"
 OFFLINE_INDEX_FIXTURE = PIPELINE_ROOT / "tests" / "fixtures" / "fdroid" / "index-v2.mini.json"
 USER_AGENT = "MobileSecObservatory/0.1 (research)"
+MIN_INTERVAL_SECONDS = 0.5
 
 
 @dataclass
@@ -62,6 +65,7 @@ class FDroidVersion:
     size_bytes: int
     target_sdk: int
     min_sdk: int
+    sha256: Optional[str] = None
 
 
 class FDroidCollector:
@@ -74,6 +78,7 @@ class FDroidCollector:
         """初始化 F-Droid 缓存目录。"""
         self.cache_dir = cache_dir
         self.cache_dir.mkdir(parents=True, exist_ok=True)
+        self._last_request_at = 0.0
 
     def fetch_index(self, force_refresh: bool = False) -> dict:
         """下载或读取缓存的 F-Droid 索引。"""
@@ -88,6 +93,7 @@ class FDroidCollector:
             return json.loads(cache_file.read_text(encoding="utf-8"))
 
         try:
+            self._rate_limit()
             response = requests.get(
                 self.INDEX_URL,
                 headers={"User-Agent": USER_AGENT},
@@ -132,7 +138,11 @@ class FDroidCollector:
             for package_name, package_data in packages.items():
                 if package_name in selected_names:
                     continue
-                app_categories = set(package_data.get("metadata", {}).get("categories", []))
+                metadata = package_data.get("metadata", {})
+                if not isinstance(metadata, dict):
+                    metadata = {}
+                categories_value = metadata.get("categories", [])
+                app_categories = set(categories_value if isinstance(categories_value, list) else [])
                 if category not in app_categories:
                     continue
 
@@ -150,7 +160,6 @@ class FDroidCollector:
                 if len(latest_three) < min_versions:
                     continue
 
-                metadata = package_data.get("metadata", {})
                 candidates.append(
                     FDroidApp(
                         package_name=package_name,
@@ -186,10 +195,13 @@ class FDroidCollector:
         apk_dir = self.cache_dir.parent / "apks"
         apk_dir.mkdir(parents=True, exist_ok=True)
         target = apk_dir / f"{app.package_name}__{version.version_code}.apk"
-        expected_sha256 = self._find_version_sha256(app.package_name, version.version_code)
+        expected_sha256 = version.sha256 or self._find_version_sha256(app.package_name, version.version_code)
 
         if target.exists() and expected_sha256 and _sha256(target) == expected_sha256:
             logger.info("APK already exists with matching sha256: %s", target)
+            return target
+        if target.exists() and not expected_sha256 and version.size_bytes > 0 and target.stat().st_size == version.size_bytes:
+            logger.info("APK already exists with matching size: %s", target)
             return target
 
         url = f"{self.REPO_BASE}/{version.apk_filename}"
@@ -197,6 +209,7 @@ class FDroidCollector:
         for attempt in range(max_retries):
             try:
                 logger.info("Downloading APK %s (%d/%d)", url, attempt + 1, max_retries)
+                self._rate_limit()
                 with requests.get(
                     url,
                     headers={"User-Agent": USER_AGENT},
@@ -211,6 +224,9 @@ class FDroidCollector:
                 if expected_sha256 and _sha256(target) != expected_sha256:
                     target.unlink(missing_ok=True)
                     raise RuntimeError(f"sha256 mismatch for {target.name}")
+                if not expected_sha256 and version.size_bytes > 0 and target.stat().st_size != version.size_bytes:
+                    target.unlink(missing_ok=True)
+                    raise RuntimeError(f"size mismatch for {target.name}")
                 return target
             except (requests.RequestException, RuntimeError) as exc:
                 last_error = exc
@@ -227,9 +243,17 @@ class FDroidCollector:
             return versions
 
         for raw_version in raw_versions.values():
+            if not isinstance(raw_version, dict):
+                continue
             file_info = raw_version.get("file", {})
+            if not isinstance(file_info, dict):
+                file_info = {}
             manifest = raw_version.get("manifest", {})
+            if not isinstance(manifest, dict):
+                manifest = {}
             uses_sdk = manifest.get("usesSdk", {})
+            if not isinstance(uses_sdk, dict):
+                uses_sdk = {}
             size_bytes = int(file_info.get("size") or 0)
             if size_bytes > max_size_bytes:
                 continue
@@ -247,6 +271,7 @@ class FDroidCollector:
                     size_bytes=size_bytes,
                     target_sdk=int(uses_sdk.get("targetSdkVersion") or 0),
                     min_sdk=int(uses_sdk.get("minSdkVersion") or 0),
+                    sha256=file_info.get("sha256"),
                 )
             )
         return versions
@@ -255,10 +280,24 @@ class FDroidCollector:
         """从索引中查询指定版本的 sha256。"""
         package_data = self.fetch_index().get("packages", {}).get(package_name, {})
         for raw_version in package_data.get("versions", {}).values():
-            raw_code = raw_version.get("versionCode") or raw_version.get("manifest", {}).get("versionCode")
+            if not isinstance(raw_version, dict):
+                continue
+            manifest = raw_version.get("manifest", {})
+            if not isinstance(manifest, dict):
+                manifest = {}
+            raw_code = raw_version.get("versionCode") or manifest.get("versionCode")
             if int(raw_code or -1) == version_code:
-                return raw_version.get("file", {}).get("sha256")
+                file_info = raw_version.get("file", {})
+                return file_info.get("sha256") if isinstance(file_info, dict) else None
         return None
+
+    def _rate_limit(self) -> None:
+        """Throttle online requests to be polite to upstream services."""
+        elapsed = time.monotonic() - self._last_request_at
+        wait = MIN_INTERVAL_SECONDS - elapsed
+        if wait > 0:
+            time.sleep(wait)
+        self._last_request_at = time.monotonic()
 
     @staticmethod
     def _latest_release_timestamp(versions: list[FDroidVersion]) -> float:
@@ -285,6 +324,11 @@ def select_sample(yaml_path: Path) -> list[FDroidApp]:
         min_target_sdk=int(per_app.get("min_target_sdk", 26)),
         per_category_count=int(criteria.get("categories", [{}])[0].get("count", 6)),
     )
+
+
+def progress_items(items: list, desc: str):
+    """Return a tqdm iterator only for interactive terminals."""
+    return tqdm(items, desc=desc, disable=not sys.stderr.isatty())
 
 
 def fdroid_apps_to_dicts(apps: list[FDroidApp]) -> list[dict]:

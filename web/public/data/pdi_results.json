@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-11T16:23:37.074599+00:00",
+  "generated_at": "2026-06-12T00:28:12.212571+00:00",
   "weights": {
     "alpha": 0.3,
     "beta": 0.4,
@@ -8,166 +8,1312 @@
     "delta": 0.1
   },
   "summary_stats": {
-    "mean_pdi": 0.9567,
-    "median_pdi": 1.315,
-    "max_pdi": 1.87,
+    "mean_pdi": 0.0017,
+    "median_pdi": 0.0,
+    "max_pdi": 0.205,
     "apps_with_drift": 3,
-    "apps_with_silent_expansion": 3
+    "apps_with_silent_expansion": 0
   },
   "results": [
     {
-      "app_id": "com.mso.media",
-      "app_name": "MSO Media",
+      "app_id": "app.comaps.fdroid",
+      "app_name": "app.comaps.fdroid",
       "drift_sequence": [
         {
-          "from_version": "2.0.0",
-          "to_version": "2.1.0",
-          "from_release_date": "2026-01-01",
-          "to_release_date": "2026-02-01",
-          "components": {
-            "delta_d": 1.5,
-            "delta_s": 1,
-            "delta_c": 2,
-            "delta_e": 1
-          },
-          "pdi": 1.35,
-          "details": {
-            "new_dangerous_permissions": [
-              "android.permission.READ_MEDIA_VIDEO",
-              "android.permission.RECORD_AUDIO"
-            ],
-            "silent_expansion_groups": [
-              "STORAGE"
-            ],
-            "removed_permissions": []
-          }
-        },
-        {
-          "from_version": "2.1.0",
-          "to_version": "2.2.0",
-          "from_release_date": "2026-02-01",
+          "from_version": "2026.04.23-19-FDroid",
+          "to_version": "2026.05.06-11-FDroid",
+          "from_release_date": "2026-03-01",
           "to_release_date": "2026-03-01",
           "components": {
-            "delta_d": 0.8,
+            "delta_d": 0,
             "delta_s": 0,
             "delta_c": 0,
-            "delta_e": 2
-          },
-          "pdi": 0.44,
-          "details": {
-            "new_dangerous_permissions": [
-              "android.permission.CAMERA"
-            ],
-            "silent_expansion_groups": [],
-            "removed_permissions": [
-              "android.permission.READ_EXTERNAL_STORAGE"
-            ]
-          }
-        }
-      ],
-      "cumulative_pdi": 1.79
-    },
-    {
-      "app_id": "io.mso.reader",
-      "app_name": "MSO Reader",
-      "drift_sequence": [
-        {
-          "from_version": "3.0.0",
-          "to_version": "3.1.0",
-          "from_release_date": "2026-01-01",
-          "to_release_date": "2026-02-01",
-          "components": {
-            "delta_d": 0.75,
-            "delta_s": 0,
-            "delta_c": 1,
             "delta_e": 0
           },
-          "pdi": 0.425,
+          "pdi": 0.0,
           "details": {
-            "new_dangerous_permissions": [
-              "android.permission.READ_CONTACTS"
-            ],
+            "new_dangerous_permissions": [],
             "silent_expansion_groups": [],
             "removed_permissions": []
           }
         },
         {
-          "from_version": "3.1.0",
-          "to_version": "3.2.0",
-          "from_release_date": "2026-02-01",
+          "from_version": "2026.05.06-11-FDroid",
+          "to_version": "2026.06.05-11-FDroid",
+          "from_release_date": "2026-03-01",
           "to_release_date": "2026-03-01",
           "components": {
-            "delta_d": 1.05,
-            "delta_s": 1,
-            "delta_c": 2,
-            "delta_e": 2
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
           },
-          "pdi": 1.315,
+          "pdi": 0.0,
           "details": {
-            "new_dangerous_permissions": [
-              "android.permission.POST_NOTIFICATIONS",
-              "android.permission.WRITE_CONTACTS"
-            ],
-            "silent_expansion_groups": [
-              "CONTACTS"
-            ],
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
             "removed_permissions": []
           }
         }
       ],
-      "cumulative_pdi": 1.74
+      "cumulative_pdi": 0.0
     },
     {
-      "app_id": "org.mso.demo",
-      "app_name": "MSO Demo",
+      "app_id": "com.android.geto",
+      "app_name": "com.android.geto",
       "drift_sequence": [
         {
-          "from_version": "1.0.0",
-          "to_version": "1.1.0",
-          "from_release_date": "2026-01-01",
-          "to_release_date": "2026-02-01",
+          "from_version": "1.16.9",
+          "to_version": "1.17.0",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
           "components": {
-            "delta_d": 0.9,
-            "delta_s": 2,
-            "delta_c": 3,
-            "delta_e": 2
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
           },
-          "pdi": 1.87,
+          "pdi": 0.0,
           "details": {
-            "new_dangerous_permissions": [
-              "android.permission.ACCESS_FINE_LOCATION"
-            ],
-            "silent_expansion_groups": [
-              "LOCATION",
-              "NETWORK"
-            ],
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
             "removed_permissions": []
           }
         },
         {
-          "from_version": "1.1.0",
-          "to_version": "1.2.0",
-          "from_release_date": "2026-02-01",
+          "from_version": "1.17.0",
+          "to_version": "1.17.1",
+          "from_release_date": "2026-03-01",
           "to_release_date": "2026-03-01",
           "components": {
-            "delta_d": 0.8,
+            "delta_d": 0,
             "delta_s": 0,
             "delta_c": 0,
-            "delta_e": 1
+            "delta_e": -1
           },
-          "pdi": 0.34,
+          "pdi": -0.1,
           "details": {
-            "new_dangerous_permissions": [
-              "android.permission.CAMERA"
-            ],
+            "new_dangerous_permissions": [],
             "silent_expansion_groups": [],
             "removed_permissions": [
-              "android.permission.ACCESS_COARSE_LOCATION"
+              "android.permission.FOREGROUND_SERVICE",
+              "android.permission.FOREGROUND_SERVICE_SPECIAL_USE",
+              "android.permission.PACKAGE_USAGE_STATS",
+              "moe.shizuku.manager.permission.API_V23"
             ]
           }
         }
       ],
-      "cumulative_pdi": 2.21
+      "cumulative_pdi": -0.1
+    },
+    {
+      "app_id": "com.demizo.daily_you",
+      "app_name": "com.demizo.daily_you",
+      "drift_sequence": [
+        {
+          "from_version": "2.24.1",
+          "to_version": "2.24.1",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "2.24.1",
+          "to_version": "2.24.1",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.0
+    },
+    {
+      "app_id": "com.google.android.stardroid",
+      "app_name": "com.google.android.stardroid",
+      "drift_sequence": [
+        {
+          "from_version": "1.15.0:Saturn",
+          "to_version": "1.15.1:Saturn",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "1.15.1:Saturn",
+          "to_version": "1.15.2:Saturn",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.0
+    },
+    {
+      "app_id": "com.ivarna.mkm",
+      "app_name": "com.ivarna.mkm",
+      "drift_sequence": [
+        {
+          "from_version": "1.2",
+          "to_version": "1.4",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0.35,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 1
+          },
+          "pdi": 0.205,
+          "details": {
+            "new_dangerous_permissions": [
+              "android.permission.POST_NOTIFICATIONS"
+            ],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "1.4",
+          "to_version": "1.5",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.205
+    },
+    {
+      "app_id": "com.kaizen.khushu",
+      "app_name": "com.kaizen.khushu",
+      "drift_sequence": [
+        {
+          "from_version": "0.24.9",
+          "to_version": "0.24.10",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "0.24.10",
+          "to_version": "0.24.11",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 1
+          },
+          "pdi": 0.1,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.1
+    },
+    {
+      "app_id": "com.kjxbyz.picguard",
+      "app_name": "com.kjxbyz.picguard",
+      "drift_sequence": [
+        {
+          "from_version": "5.5.2",
+          "to_version": "5.5.3",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "5.5.3",
+          "to_version": "5.6.0",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": -1,
+            "delta_e": 0
+          },
+          "pdi": -0.2,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": [
+              "android.permission.READ_EXTERNAL_STORAGE",
+              "android.permission.READ_MEDIA_IMAGES"
+            ]
+          }
+        }
+      ],
+      "cumulative_pdi": -0.2
+    },
+    {
+      "app_id": "com.kylecorry.trail_sense",
+      "app_name": "com.kylecorry.trail_sense",
+      "drift_sequence": [
+        {
+          "from_version": "8.0.0",
+          "to_version": "8.0.1",
+          "from_release_date": "2026-01-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "8.0.1",
+          "to_version": "8.0.2",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.0
+    },
+    {
+      "app_id": "com.maxrave.simpmusic",
+      "app_name": "com.maxrave.simpmusic",
+      "drift_sequence": [
+        {
+          "from_version": "1.2.1",
+          "to_version": "1.3.0",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "1.3.0",
+          "to_version": "1.4.0",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.0
+    },
+    {
+      "app_id": "com.nononsenseapps.feeder",
+      "app_name": "com.nononsenseapps.feeder",
+      "drift_sequence": [
+        {
+          "from_version": "2.19.0-2",
+          "to_version": "2.20.0",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "2.20.0",
+          "to_version": "2.21.0",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.0
+    },
+    {
+      "app_id": "com.nononsenseapps.feeder.play",
+      "app_name": "com.nononsenseapps.feeder.play",
+      "drift_sequence": [
+        {
+          "from_version": "2.19.0-2",
+          "to_version": "2.20.0",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "2.20.0",
+          "to_version": "2.21.0",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.0
+    },
+    {
+      "app_id": "com.schwegelbin.openbible",
+      "app_name": "com.schwegelbin.openbible",
+      "drift_sequence": [
+        {
+          "from_version": "3.1.0",
+          "to_version": "3.2.1",
+          "from_release_date": "2026-02-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "3.2.1",
+          "to_version": "3.2.2",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.0
+    },
+    {
+      "app_id": "com.seafile.seadroid2",
+      "app_name": "com.seafile.seadroid2",
+      "drift_sequence": [
+        {
+          "from_version": "4.0.6",
+          "to_version": "4.0.7",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "4.0.7",
+          "to_version": "4.0.8",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.0
+    },
+    {
+      "app_id": "com.sweak.qralarm",
+      "app_name": "com.sweak.qralarm",
+      "drift_sequence": [
+        {
+          "from_version": "2.9.3",
+          "to_version": "2.9.4",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "2.9.4",
+          "to_version": "2.10.0",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.0
+    },
+    {
+      "app_id": "com.viscouspot.gitsync",
+      "app_name": "com.viscouspot.gitsync",
+      "drift_sequence": [
+        {
+          "from_version": "1.8.60",
+          "to_version": "1.8.60",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "1.8.60",
+          "to_version": "1.8.60",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.0
+    },
+    {
+      "app_id": "com.vovagorodok.ble_ota_app",
+      "app_name": "com.vovagorodok.ble_ota_app",
+      "drift_sequence": [
+        {
+          "from_version": "2.0.1",
+          "to_version": "2.0.2",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "2.0.2",
+          "to_version": "2.0.3",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.0
+    },
+    {
+      "app_id": "com.wqar.quran_mem_helper",
+      "app_name": "com.wqar.quran_mem_helper",
+      "drift_sequence": [
+        {
+          "from_version": "1.8.0",
+          "to_version": "1.8.1",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "1.8.1",
+          "to_version": "1.8.1",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.0
+    },
+    {
+      "app_id": "de.markusfisch.android.binaryeye",
+      "app_name": "de.markusfisch.android.binaryeye",
+      "drift_sequence": [
+        {
+          "from_version": "1.73.1",
+          "to_version": "1.74.0",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "1.74.0",
+          "to_version": "1.74.1",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.0
+    },
+    {
+      "app_id": "de.schildbach.oeffi",
+      "app_name": "de.schildbach.oeffi",
+      "drift_sequence": [
+        {
+          "from_version": "14.0.3",
+          "to_version": "14.0.4",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "14.0.4",
+          "to_version": "14.0.5",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.0
+    },
+    {
+      "app_id": "de.tutao.tutanota",
+      "app_name": "de.tutao.tutanota",
+      "drift_sequence": [
+        {
+          "from_version": "348.260526.0",
+          "to_version": "349.260602.1",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "349.260602.1",
+          "to_version": "350.260608.0",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.0
+    },
+    {
+      "app_id": "eu.faircode.email",
+      "app_name": "eu.faircode.email",
+      "drift_sequence": [
+        {
+          "from_version": "1.2318",
+          "to_version": "1.2319",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "1.2319",
+          "to_version": "1.2320",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.0
+    },
+    {
+      "app_id": "fr.ralala.hexviewer",
+      "app_name": "fr.ralala.hexviewer",
+      "drift_sequence": [
+        {
+          "from_version": "1.59.6",
+          "to_version": "1.59.7",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "1.59.7",
+          "to_version": "1.59.8",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.0
+    },
+    {
+      "app_id": "io.github.adithya_jayan.myrepertoirapp.fdroid",
+      "app_name": "io.github.adithya_jayan.myrepertoirapp.fdroid",
+      "drift_sequence": [
+        {
+          "from_version": "5.0.1",
+          "to_version": "5.0.1",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "5.0.1",
+          "to_version": "5.0.1",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.0
+    },
+    {
+      "app_id": "it.niedermann.owncloud.notes",
+      "app_name": "it.niedermann.owncloud.notes",
+      "drift_sequence": [
+        {
+          "from_version": "33.1.0 RC 1",
+          "to_version": "33.1.0",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-02-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "33.1.0",
+          "to_version": "34.0.0",
+          "from_release_date": "2026-02-01",
+          "to_release_date": "2026-01-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.0
+    },
+    {
+      "app_id": "m.co.rh.id.a_news_provider",
+      "app_name": "m.co.rh.id.a_news_provider",
+      "drift_sequence": [
+        {
+          "from_version": "1.11.1",
+          "to_version": "1.11.2",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 1
+          },
+          "pdi": 0.1,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "1.11.2",
+          "to_version": "1.12.0",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.1
+    },
+    {
+      "app_id": "net.bible.android.activity",
+      "app_name": "net.bible.android.activity",
+      "drift_sequence": [
+        {
+          "from_version": "5.0.910",
+          "to_version": "5.1.1099",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "5.1.1099",
+          "to_version": "5.1.1100",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.0
+    },
+    {
+      "app_id": "net.pfiers.osmfocus",
+      "app_name": "net.pfiers.osmfocus",
+      "drift_sequence": [
+        {
+          "from_version": "1.9.0-fdroid-fdroid",
+          "to_version": "1.9.12-fdroid",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "1.9.12-fdroid",
+          "to_version": "1.9.13-fdroid",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.0
+    },
+    {
+      "app_id": "org.connectbot",
+      "app_name": "org.connectbot",
+      "drift_sequence": [
+        {
+          "from_version": "1.10.7-oss",
+          "to_version": "1.10.8-oss",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "1.10.8-oss",
+          "to_version": "1.10.9-oss",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.0
+    },
+    {
+      "app_id": "org.grakovne.lissen",
+      "app_name": "org.grakovne.lissen",
+      "drift_sequence": [
+        {
+          "from_version": "1.10.0-release",
+          "to_version": "1.10.1-release",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "1.10.1-release",
+          "to_version": "1.10.2-release",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.0
+    },
+    {
+      "app_id": "page.ooooo.geoshare",
+      "app_name": "page.ooooo.geoshare",
+      "drift_sequence": [
+        {
+          "from_version": "6.2.2",
+          "to_version": "6.3.0",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        },
+        {
+          "from_version": "6.3.0",
+          "to_version": "6.3.1",
+          "from_release_date": "2026-03-01",
+          "to_release_date": "2026-03-01",
+          "components": {
+            "delta_d": 0,
+            "delta_s": 0,
+            "delta_c": 0,
+            "delta_e": 0
+          },
+          "pdi": 0.0,
+          "details": {
+            "new_dangerous_permissions": [],
+            "silent_expansion_groups": [],
+            "removed_permissions": []
+          }
+        }
+      ],
+      "cumulative_pdi": 0.0
     }
   ]
 }

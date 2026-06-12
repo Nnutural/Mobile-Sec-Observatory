@@ -1,4 +1,4 @@
-androguard>=3.4.0,<4.0
+androguard>=3.3.5,<4.0
 requests>=2.31
 beautifulsoup4>=4.12
 lxml>=5.0
@@ -8,3 +8,5 @@ jsonschema>=4.20
 click>=8.1
 pyyaml>=6.0
 pytest>=7.4
+responses>=0.24
+tqdm>=4.66

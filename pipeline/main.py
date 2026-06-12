@@ -14,9 +14,9 @@ import click
 
 from pipeline.analyzers.apk_analyzer import APKAnalysisResult, APKAnalyzer
 from pipeline.analyzers.batch_analyzer import BatchAPKAnalyzer
-from pipeline.collectors.bulletin_scraper import BulletinScraper, Vulnerability, vulnerabilities_to_dicts
+from pipeline.collectors.bulletin_scraper import BulletinScraper, Vulnerability, cache_path, progress_items as bulletin_progress_items, vulnerabilities_to_dicts
 from pipeline.collectors.comparison_extractor import ComparisonExtractor, PermissionAPIMerger
-from pipeline.collectors.fdroid_collector import FDroidCollector, fdroid_apps_to_dicts, select_sample
+from pipeline.collectors.fdroid_collector import FDroidCollector, fdroid_apps_to_dicts, progress_items as fdroid_progress_items, select_sample
 from pipeline.exporters.json_exporter import JSONExporter
 from pipeline.metrics.aggregator import StatisticsAggregator
 from pipeline.metrics.clri_calculator import CLRICalculator
@@ -72,7 +72,7 @@ def collect_fdroid(ctx: click.Context, offline: bool, limit: int | None) -> None
 
     collector = FDroidCollector(cache_dir=RAW_DIR / "fdroid")
     downloaded = 0
-    for app in apps:
+    for app in fdroid_progress_items(apps, "download-apks"):
         for version in app.versions:
             if limit is not None and downloaded >= limit:
                 click.echo(f"[step] collect-fdroid: download limit reached ({limit})")
@@ -101,14 +101,15 @@ def collect_bulletins(ctx: click.Context, offline: bool, start: str | None, end:
     cache_dir.mkdir(parents=True, exist_ok=True)
     parsed_dir.mkdir(parents=True, exist_ok=True)
 
-    for bulletin_date in scraper.list_bulletins_in_range(start_date, end_date):
+    bulletin_dates = scraper.list_bulletins_in_range(start_date, end_date)
+    for bulletin_date in bulletin_progress_items(bulletin_dates, "collect-bulletins"):
         if offline:
             html = _load_offline_bulletin_html(bulletin_date, cache_dir)
         else:
-            url = f"{scraper.BASE_URL}/{bulletin_date:%Y-%m-%d}"
+            url = scraper.bulletin_url(bulletin_date)
             try:
                 html = scraper._fetch(url)
-                (cache_dir / f"{bulletin_date:%Y-%m}.html").write_text(html, encoding="utf-8")
+                cache_path(cache_dir, bulletin_date).write_text(html, encoding="utf-8")
             except Exception as exc:
                 logger.error("Failed to fetch bulletin %s: %s", bulletin_date.isoformat(), exc)
                 continue

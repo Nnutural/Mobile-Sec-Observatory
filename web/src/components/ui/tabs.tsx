@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useExportMode } from "@/components/charts/ExportMode";
 import { colors } from "@/design/colors";
 import { cn } from "@/utils/cn";
 
@@ -75,7 +76,8 @@ export interface TabsContentProps extends React.HTMLAttributes<HTMLDivElement> {
 export const TabsContent = React.forwardRef<HTMLDivElement, TabsContentProps>(
   ({ className, value, ...props }, ref) => {
     const context = React.useContext(TabsContext);
-    if (context?.value !== value) return null;
+    const exportMode = useExportMode();
+    if (!exportMode && context?.value !== value) return null;
     return <div ref={ref} className={cn("mt-4", className)} {...props} />;
   },
 );

@@ -3,9 +3,13 @@
 from __future__ import annotations
 
 from dataclasses import asdict
+from datetime import datetime, timezone
 from pathlib import Path
 import json
 import logging
+import sys
+
+from tqdm import tqdm
 
 from pipeline.analyzers.apk_analyzer import APKAnalysisResult, APKAnalyzer
 
@@ -30,8 +34,9 @@ class BatchAPKAnalyzer:
         inputs = sorted(set(apk_directory.glob("*.apk")) | set(apk_directory.glob("*.manifest.xml")))
         results: list[APKAnalysisResult] = []
         failures_log = output_directory / "_failures.log"
+        failure_count = 0
 
-        for input_path in inputs:
+        for input_path in tqdm(inputs, desc="analyze-apks", disable=not sys.stderr.isatty()):
             cache_file = output_directory / f"{input_path.stem}.json"
             if input_path.name.endswith(".manifest.xml"):
                 cache_file = output_directory / f"{input_path.name.removesuffix('.manifest.xml')}.json"
@@ -44,9 +49,16 @@ class BatchAPKAnalyzer:
                 cache_file.write_text(json.dumps(asdict(result), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
                 results.append(result)
             except Exception as exc:
+                failure_count += 1
                 logger.exception("Failed to analyze %s", input_path)
                 with failures_log.open("a", encoding="utf-8") as handle:
-                    handle.write(f"{input_path}: {exc}\n")
+                    handle.write(f"{_now_iso()} | analyze-apks | {input_path} | {exc.__class__.__name__}: {exc}\n")
                 continue
 
+        logger.info("Batch APK analysis complete: success=%d failure=%d", len(results), failure_count)
         return sorted(results, key=lambda item: (item.package_name, item.version_code))
+
+
+def _now_iso() -> str:
+    """Return an ISO timestamp for failure logs."""
+    return datetime.now(timezone.utc).isoformat()

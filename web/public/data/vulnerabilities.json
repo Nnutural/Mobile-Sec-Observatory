@@ -1,59 +1,3389 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-11T16:23:37.075598+00:00",
+  "generated_at": "2026-06-12T00:28:12.332981+00:00",
   "time_range": {
-    "start": "2024-06",
-    "end": "2025-03"
+    "start": "2026-01",
+    "end": "2026-06"
   },
-  "total_count": 3,
+  "total_count": 239,
   "vulnerabilities": [
     {
-      "cve_id": "CVE-2024-1001",
-      "bulletin_date": "2024-06-01",
-      "patch_level": "2024-06-01",
+      "cve_id": "CVE-2025-54957",
+      "bulletin_date": "2026-01-01",
+      "patch_level": "2026-01-01",
+      "severity": "Critical",
+      "type": "N/A",
+      "component": "DD+ Codec",
+      "component_category": "Media",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-01-01"
+    },
+    {
+      "cve_id": "CVE-2026-0047",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "Critical",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-32313",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
       "severity": "High",
       "type": "EoP",
       "component": "Framework",
       "component_category": "Framework",
       "affected_versions": [
-        "12",
-        "13",
-        "14"
+        "14",
+        "15",
+        "16"
       ],
       "vendor": "AOSP",
-      "bulletin_url": "https://source.android.com/docs/security/bulletin/2024-06-01"
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
     },
     {
-      "cve_id": "CVE-2024-1101",
-      "bulletin_date": "2024-11-01",
-      "patch_level": "2024-11-01",
-      "severity": "Critical",
-      "type": "RCE",
-      "component": "Media Codec",
-      "component_category": "Media",
+      "cve_id": "CVE-2025-48544",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
       "affected_versions": [
-        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-48567",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-48568",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
         "14",
         "15"
       ],
       "vendor": "AOSP",
-      "bulletin_url": "https://source.android.com/docs/security/bulletin/2024-11-01"
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
     },
     {
-      "cve_id": "CVE-2025-3001",
-      "bulletin_date": "2025-03-01",
-      "patch_level": "2025-03-01",
-      "severity": "Moderate",
-      "type": "ID",
-      "component": "Qualcomm WLAN",
-      "component_category": "Vendor",
+      "cve_id": "CVE-2025-48574",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
       "affected_versions": [
-        "12",
-        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-48578",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-48579",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-48582",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-48619",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-48634",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-48635",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-48645",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-48646",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-48654",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-0010",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-0011",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-0013",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-0020",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-0023",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-0026",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
         "14"
       ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-0034",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-48630",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "ID",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-0012",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "ID",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-0025",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "ID",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-48644",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "DoS",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-0014",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "DoS",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-0015",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "DoS",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-0006",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "Critical",
+      "type": "RCE",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "16"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-48631",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "Critical",
+      "type": "DoS",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-48577",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-48602",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-48641",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-0017",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-0021",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-0035",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2024-43766",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "ID",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-48642",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "ID",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-64783",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "ID",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-64784",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "ID",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-64893",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "ID",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-0005",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "ID",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-0024",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "ID",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-48585",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "DoS",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "16"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-48587",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "DoS",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "16"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-48609",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "DoS",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2024-43859",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "Critical",
+      "type": "EoP",
+      "component": "Flash-Friendly File System",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Kernel",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-0037",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "Critical",
+      "type": "EoP",
+      "component": "Protected Kernel-Based Virtual Machine",
+      "component_category": "Kernel",
+      "affected_versions": [],
+      "vendor": "Kernel",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-0038",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "Critical",
+      "type": "EoP",
+      "component": "Hypervisor",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Kernel",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-38616",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Transport Layer Security",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Kernel",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-38618",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "vsock",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Kernel",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-39682",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Transport Layer Security",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Kernel",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-39946",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Transport Layer Security",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Kernel",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-0029",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Protected Kernel-Based Virtual Machine",
+      "component_category": "Kernel",
+      "affected_versions": [],
+      "vendor": "Kernel",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-0027",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "Critical",
+      "type": "EoP",
+      "component": "Protected Kernel-Based Virtual Machine",
+      "component_category": "Kernel",
+      "affected_versions": [],
+      "vendor": "Kernel",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-0028",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "Critical",
+      "type": "EoP",
+      "component": "pKVM",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Kernel",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-0030",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "Critical",
+      "type": "EoP",
+      "component": "pKVM",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Kernel",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-0031",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "Critical",
+      "type": "EoP",
+      "component": "pKVM",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Kernel",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-39946",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "TLS",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Kernel",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-40266",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "pKVM",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Kernel",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-0032",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "pKVM",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Kernel",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-2879",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Mali",
+      "component_category": "Vendor",
+      "affected_versions": [],
+      "vendor": "Arm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-10865",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "PowerVR-GPU",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Imagination",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-13952",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "PowerVR-GPU",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Imagination",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-58407",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "PowerVR-GPU",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Imagination",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-58408",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "PowerVR-GPU",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Imagination",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-58409",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "PowerVR-GPU",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Imagination",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-58411",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "PowerVR-GPU",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Imagination",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-20795",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "KeyInstall",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-20425",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "display",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-20426",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "display",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-20427",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "display",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-20428",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "display",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-20434",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-20760",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-20761",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-20762",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-20793",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-20794",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-20401",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-20402",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-20403",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-20404",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-20405",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-20406",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-20420",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-20421",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-20422",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-48613",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "VBMeta",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-61612",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-61613",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-61614",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-61615",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-61616",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-69278",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-69279",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-47388",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Security",
+      "component_category": "System",
+      "affected_versions": [],
       "vendor": "Qualcomm",
-      "bulletin_url": "https://source.android.com/docs/security/bulletin/2025-03-01"
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-47394",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Kernel",
+      "component_category": "Kernel",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-47396",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Display",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-47397",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Display",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-47398",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Display",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-59600",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Display",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-21385",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Display",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-47339",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Closed-source component",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-47346",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Closed-source component",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-47348",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Closed-source component",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-47366",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Closed-source component",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-47378",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Closed-source component",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-47385",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Closed-source component",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-47395",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Closed-source component",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2025-47402",
+      "bulletin_date": "2026-03-01",
+      "patch_level": "2026-03-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Closed-source component",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01"
+    },
+    {
+      "cve_id": "CVE-2026-0049",
+      "bulletin_date": "2026-04-01",
+      "patch_level": "2026-04-01",
+      "severity": "Critical",
+      "type": "DoS",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-04-01"
+    },
+    {
+      "cve_id": "CVE-2025-48651",
+      "bulletin_date": "2026-04-01",
+      "patch_level": "2026-04-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "StrongBox",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-04-01"
+    },
+    {
+      "cve_id": "CVE-2025-48651",
+      "bulletin_date": "2026-04-01",
+      "patch_level": "2026-04-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "StrongBox",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-04-01"
+    },
+    {
+      "cve_id": "CVE-2025-48651",
+      "bulletin_date": "2026-04-01",
+      "patch_level": "2026-04-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "StrongBox",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-04-01"
+    },
+    {
+      "cve_id": "CVE-2025-48651",
+      "bulletin_date": "2026-04-01",
+      "patch_level": "2026-04-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "StrongBox",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-04-01"
+    },
+    {
+      "cve_id": "CVE-2026-0073",
+      "bulletin_date": "2026-05-01",
+      "patch_level": "2026-05-01",
+      "severity": "Critical",
+      "type": "RCE",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-05-01"
+    },
+    {
+      "cve_id": "CVE-2025-65018",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "Critical",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-64720",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "Critical",
+      "type": "DoS",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-22424",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-22426",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-48570",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-48595",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-48615",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-48649",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-48652",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0009",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "15",
+        "16"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0046",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0048",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0055",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0061",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0076",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0077",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0078",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0087",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0089",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0091",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0100",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-28577",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-28580",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0016",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "ID",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0036",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "ID",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0056",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "ID",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-28586",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "ID",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-32348",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "DoS",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0018",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "DoS",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0069",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "DoS",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0070",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "DoS",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-28578",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "DoS",
+      "component": "Framework",
+      "component_category": "Framework",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0043",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "Critical",
+      "type": "EoP",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0097",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "Critical",
+      "type": "EoP",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-21352",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "Critical",
+      "type": "EoP",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-21353",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "Critical",
+      "type": "EoP",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-64505",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "Critical",
+      "type": "DoS",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0039",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "Critical",
+      "type": "DoS",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0040",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "Critical",
+      "type": "DoS",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0041",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "Critical",
+      "type": "DoS",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0042",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "Critical",
+      "type": "DoS",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0044",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "Critical",
+      "type": "DoS",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0051",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "Critical",
+      "type": "DoS",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0052",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "Critical",
+      "type": "DoS",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0080",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "Critical",
+      "type": "DoS",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0059",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "RCE",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-26418",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-48581",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "16"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-48612",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0045",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0075",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0086",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0088",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0093",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0094",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0095",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0096",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0098",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0099",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-28574",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-48600",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "ID",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-48616",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "ID",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0050",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "ID",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-48648",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "DoS",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0060",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "DoS",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0067",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "DoS",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0074",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "DoS",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0079",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "DoS",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-0085",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "DoS",
+      "component": "System",
+      "component_category": "System",
+      "affected_versions": [
+        "14",
+        "15",
+        "16",
+        "16-qpr2"
+      ],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-40214",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "EoP",
+      "component": "Net",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Kernel",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-21736",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "PowerVR-GPU",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Imagination",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-22163",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "PowerVR-GPU",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Imagination",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-22167",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "PowerVR-GPU",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Imagination",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-20432",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-20433",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-20447",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "geniezone",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-20448",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "geniezone",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-20453",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "geniezone",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-20454",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "geniezone",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-20455",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "geniezone",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-20435",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "preloader",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-20431",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-20449",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-20450",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "MediaTek",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-71251",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-71252",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-71253",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-71254",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-71255",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-71256",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-21538",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-21539",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-21540",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-21541",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-21542",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-21543",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-21544",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-21545",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-21546",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-21547",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Modem",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "AOSP",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-24085",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Display",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-24089",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Display",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-47392",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "Critical",
+      "type": "N/A",
+      "component": "Closed-source component",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-25276",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "Critical",
+      "type": "N/A",
+      "component": "Closed-source component",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-25277",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "Critical",
+      "type": "N/A",
+      "component": "Closed-source component",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-47384",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Closed-source component",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-47400",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Closed-source component",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-47401",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Closed-source component",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-47403",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Closed-source component",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-59604",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Closed-source component",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-59605",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Closed-source component",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2025-59606",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Closed-source component",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-21367",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Closed-source component",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-21372",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Closed-source component",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-21373",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Closed-source component",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-21374",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Closed-source component",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-21375",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Closed-source component",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-21376",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Closed-source component",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-21378",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Closed-source component",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-21380",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Closed-source component",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
+    },
+    {
+      "cve_id": "CVE-2026-21381",
+      "bulletin_date": "2026-06-01",
+      "patch_level": "2026-06-01",
+      "severity": "High",
+      "type": "N/A",
+      "component": "Closed-source component",
+      "component_category": "System",
+      "affected_versions": [],
+      "vendor": "Qualcomm",
+      "bulletin_url": "https://source.android.com/docs/security/bulletin/2026/2026-06-01"
     }
   ]
 }

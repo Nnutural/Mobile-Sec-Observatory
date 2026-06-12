@@ -1,5 +1,6 @@
 import { Github, ShieldCheck } from "lucide-react";
 import { NavLink } from "react-router-dom";
+import { BatchExportButton } from "@/components/charts/BatchExportButton";
 import { colors } from "@/design/colors";
 import { useDashboardStats } from "@/hooks/useData";
 import { formatDate } from "@/utils/formatters";
@@ -53,6 +54,7 @@ export function Header() {
         </nav>
         <div className="flex items-center gap-3 text-sm" style={{ color: colors.gray[500] }}>
           <span>数据更新日期 {dateText}</span>
+          <BatchExportButton />
           <a
             className="rounded transition hover:opacity-80 focus-visible:outline-none focus-visible:ring-2"
             href="https://github.com/"
